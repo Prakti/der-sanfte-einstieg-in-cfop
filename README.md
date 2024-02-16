@@ -1,13 +1,17 @@
-# Rubik's Cube Lösungsanleitung
+# Der sanfte Einstieg in CFOP
+
+Ein in LaTeX geschriebenes Speedcubing Buch.
+
+## Resources
 
 Dieses Repository enthält das LaTeX-Projekt für eine neue Anleitung zur Lösung des Rubik's Cube.
 Das Ziel ist es schon bei der Anfängermethode die richtigen Grundlagen für das Erlernen der CFOP Methode zu legen.
 Das Buch spiegelt meine eigenen Lernerfahrungen und aktuellen Lernfortschritt wieder.
-Ich versuche damit eine Anleitung zu schaffen, die ich auch selber gerne gelesen und verwendet hätte.
+Ich versuche damit eine Anleitung zu schaffen, auch selber gerne gelesen und verwendet hätte.
+Aktuelle Zielgruppe des Buches sind meine zwei Töchter.
 
-
-Das Dokument ist mit KOMA-Script erstellt und nutzt die Pakete `rubik` und `TikZ` für visuelle Darstellungen. 
-Das Projekt ist für den Druck optimiert undwird mit `latexmk` gebaut. 
+Das Dokument ist mit KOMA-Script erstellt und nutzt die Pakete `rubik` und `TikZ` für visuelle Darstellungen.
+Das Projekt ist für den Druck optimiert undwird mit `latexmk` gebaut.
 Die finale Version des Buches wird mit `pdfbook/pdfjam` für den Druck vorbereitet.
 
 ## Struktur
@@ -15,7 +19,7 @@ Die finale Version des Buches wird mit `pdfbook/pdfjam` für den Druck vorbereit
 - Das Buch hat aktuell zwei Kapitel: "CFOP für Anfänger" und "Fortgeschrittene Techniken".
   - Das Verzeichnis `anfaenger` enthält alle Abschnitte und Bilder zum Kapitel "CFOP für Anfänger"
   - `fortgeschritten` enthält alle Abschnitte und Bilder zu "Fortgeschrittene Techniken"
-  - Ein drittes Kapitel "Der letzte Schritt zum CFOP Profi" (`profi`) is geplant
+  - Ein drittes Kapitel "Der letzte Schritt zum CFOP Profi" (`profi`) ist geplant
 
 - Die zentrale Datei ist `buch.tex`
 - Es gibt zwei Shell-Scripte die die Arbeit am Buch vereinfachen:
