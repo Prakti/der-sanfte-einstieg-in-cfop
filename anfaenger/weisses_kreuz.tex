@@ -17,22 +17,27 @@ Um ein weißes Kreuz zu bilden, müssen die vier weißen Kantensteine um den wei
 }\\[1em]
 
 Wie in der Illustration eben gezeigt, geht es dabei auch darum, dass die weißen Kantensteine des Kreuzes zu den Mittelsteinen der vier angrenzenden Flächen passen.
-Also weiß-rot zu rot, weiß-blau zu blau, weiß-grün zu weiß-grün, weiß-orange zu orange.
+Also weiß-rot zu rot, weiß-blau zu blau, weiß-grün zu grün, weiß-orange zu orange.
 
 Dies bewerkstelligen wir jetzt, indem wir die Oberseite des Würfels drehen, bis der weiße Kantenstein mit seiner anderen Farbe zum angrenzenden Mittelstein einer Seite passt.
-Dann drehe diese Seite um 180°.
-Im folgenden Beispiel haben wir das einmal für die grüne Seite gezeigt:\\[1em]
+Dann drehen wir diese Seite um 180°.
+Im folgenden Beispiel zeigen wir das einmal für die grüne Seite. Erst drehen wir den grün-weißen Kantenstein über den grünen Eckstein, und dann drehen wir ihn "'runter"' auf die weiße Ebene:\\[1em]
 
 \RubikCubeGreyAll%
 \RubikFaceUp{X}{W}{X}
             {W}{Y}{W}
             {X}{W}{X}%
-\RubikFaceFront{X}{B}{X}
+\RubikFaceFront{X}{G}{X}
                {X}{R}{X}
 	       {X}{X}{X}%
-\RubikFaceRight{X}{G}{X}
+\RubikFaceRight{X}{B}{X}
 	       {X}{G}{X}
 	       {X}{X}{X}%
+\RubikFaceLeft{X}{O}{X}
+	       {X}{B}{X}
+	       {X}{X}{X}%
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+\quad\Rubik{Up}\RubikRotation{Up}
 \ShowCube{2cm}{0.4}{\DrawRubikCube}
 \quad\Rubik{R}\RubikRotation{R}
 \ShowCube{2cm}{0.4}{\DrawRubikCube}

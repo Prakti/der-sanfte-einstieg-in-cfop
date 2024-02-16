@@ -45,8 +45,9 @@ Mit der gelben Seite nach oben, soll der Würfel nach dieser Phase dann so ausse
 	      {W}{W}{W}
 	      {W}{W}{W}%
 \ShowCube{\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
-}\\[1em]
+}
 
+\pagebreak
 Um die Platzierung der Ecksteine zu bestimmen, schaue dir die zwei Mittelsteine um die zu lösende Ecke an:\\[1em]
 \RubikCubeGreyAll%
 \RubikFaceUp{X}{X}{X}
@@ -61,8 +62,7 @@ Um die Platzierung der Ecksteine zu bestimmen, schaue dir die zwei Mittelsteine 
 \RubikFaceDown{X}{W}{X}
 	      {W}{W}{W}
 	      {X}{W}{X}%
-\ShowCube{\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
-
+\ShowCube{\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}\\[1em]
 In diesem Beispiel werden die Ecksteine die Farben Rot, Grün und Weiß haben.
 
 Bringe die Ecke über die Position, an die der Stein gelangen soll. Dazu drehst
@@ -113,7 +113,7 @@ folgend dargestellten Fälle: \\[1em]
 	      {W}{W}{W}
 	      {X}{W}{X}%
 \ShowCube{0.3\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
-\\[1em]
+\\[3em]
 Um diese Fälle zu lösen widerhole den Algorithmus
 \begin{center}
   \Algo{R, U, Rp, Up}
@@ -124,12 +124,14 @@ ausgerichtet sind.
 Gehe dann zu nächsten Ecke des weißen Kreuzes und bringe durch Drehen der
 obersten Ebene wieder eine passende Ecke darüber und wiederhole den Algorithmus.
 
+\pagebreak
 \subsection{Ein Sonderfall}
-Befindet sich die zu lösende Ecke bereits auf der untersten Ebene, ist aber
-nicht korrekt ausgerichtet (d. h. verdreht), wie unten gezeigt, wird die
-Wiederholung so lange durchgeführt (also \Algo{R, U, Rp, Up}), bis die Ecke korrekt
-ausgerichtet ist (d. h. nicht mehr falsch verdreht ist).\\[1em]
-
+Es kann vorkommen, dass sich die zu lösende Ecke bereits auf der untersten Ebene befindet, aber nicht korrekt ausgerichtet (d.h. verdreht) ist.
+Auch in diesem Fall wenden wir den oben beschriebenen Algorithmus an und wiederholen ihn, bis die Ecke korrekt gelöst ist:
+\begin{center}
+  \Algo{R, U, Rp, Up}
+\end{center}
+Hier zwei Beispiele für diesen Sonderfall:\\[1em]
 \RubikCubeGreyAll%
 \RubikFaceUp{X}{X}{X}
             {X}{Y}{X}
@@ -163,7 +165,6 @@ ausgerichtet ist (d. h. nicht mehr falsch verdreht ist).\\[1em]
 
 \subsection{Noch ein Sonderfall}
 Es kann vorkommen, dass eine Ecke sich auf der untersten (weißen) Ebene, aber an der falschen Ecke befindet:\\[1em]
-
 \RubikCubeGreyAll%
 \RubikFaceUp{X}{X}{X}
             {X}{Y}{X}
@@ -179,15 +180,12 @@ Es kann vorkommen, dass eine Ecke sich auf der untersten (weißen) Ebene, aber a
 	      {X}{W}{X}%
 \ShowCube{\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
 
-Dieses Problem löst Du, indem Du wie in den anderen Fällen
+Dieses Problem lösen wir wieder mit dem oben bereits beschriebenen Algorithmus:
 \begin{center}
 \Algo{R, U, Rp, Up}
 \end{center}
-ausführst, um die Ecke auf die obere Ebene zu bekommen.
+Diesmal wenden wir ihn einmal an um den Ecksteine auf die oberste Ebezu bekommen.
+Dann verschieben wir ihn über seine Ziel-Ecke und wenden wieder den gewohnten Algorithmus an um ihn dort korrekt zu platzieren.
 Dort kannst Du die Ecke dann wie zuvor beschrieben über ihre Ziel-Ecke bringen und auch mit
-\begin{center}
-\Algo{R, U, Rp, Up}
-\end{center}
-lösen.
 
 \pagebreak
