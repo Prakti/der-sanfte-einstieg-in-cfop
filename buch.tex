@@ -1,0 +1,86 @@
+\documentclass[11pt, a5paper]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage{tgpagella}
+\usepackage{tgheros}
+
+%\usepackage[scale=0.85, a5paper]{geometry}
+
+\usepackage{tikz}
+\usepackage{rubikcube,rubikrotation,rubikpatterns}
+
+\newcommand{\Algo}[1]{\ShowSequence{\ }{\textRubik}{#1}}
+\newcommand{\Sexy}{(\Algo{R, U, Rp, Up})\ }
+\newcommand{\Train}[1]{{\sffamily\small Training Scramble:} \\ {\ttfamily\footnotesize #1}}
+
+\newenvironment{instruction}[1]{%
+  \begin{minipage}{0.45\linewidth} %
+    \begin{center} %
+      {\sffamily\bfseries #1}\\
+}{
+    \end{center}
+  \end{minipage}
+}
+
+\title{Der sanfte Einstieg in's Speedcubing}
+\author{Marcus Autenrieth}
+
+\begin{document}
+\maketitle
+
+Hi! Du wolltest schon immer mal einen Rubik's Würfel lösen und brauchst etwas, das Du ausdrucken und in der Tasche dabei haben kannst?
+Hast Du das Ziel den Würfel in unter zwei Minuten zu lösen und suchst nach dem optimalen Einstieg um sowohl erste Erfolge zu feiern, als auch später immer schneller zu werden?
+Du bist hier richtig!
+
+\tableofcontents
+
+% TODO: Table of Algorithms!
+\chapter{Einleitung}
+\input{einleitung}
+
+\chapter{CFOP für Anfänger}
+Als Erstes zeigen wir Dir wie man überhaupt den Würfel lösen kann. Wir werden so viel wie möglich
+mit anschaulichen Bildern erläutern um möglichen Missverständnissen, Fehlern bei der Umsetzung
+und damit Frustration vorzubeugen.
+\input{anfaenger/begriffe}
+\input{anfaenger/ueberblick}
+\input{anfaenger/gaensebluemchen}
+\input{anfaenger/weisses_kreuz}
+\input{anfaenger/weisse_ebene}
+\input{anfaenger/zweite_ebene}
+\input{anfaenger/gelbes_kreuz}
+\input{anfaenger/orientierung_der_gelben_ecken}
+\input{anfaenger/positionierung_der_gelben_ecken}
+\input{anfaenger/positionierung_der_gelben_kanten}
+\input{anfaenger/ausblick}
+%
+%\chapter{Fortgeschrittene Techniken}
+%Die folgenden Techniken und Algorithmen sind für alle jenen, die eine Rubik's Würfel auswendig nach der
+%oben beschriebenen Methode lösen können. Wir werden im folgenden weitere Algorithmen vorstellen,
+%die Abkürzungen für Schritte aus der Anfängermethode darstellen.
+%
+%Die Anfängermethode ist dabei ein wichtiger Ausgangspunkt für alles folgende,
+%und man sollte sie sicher anwenden können. Als Daumenregel sollte man ca. 20
+%bis 50 Würfel auswendig (und ohne zu spicken) gelöst haben bevor man hier weiter macht.
+%
+%Du bist noch nicht so weit? Kein Problem! Leg los und löse ein paar Würfel! Wenn
+%Du etwas Ansporn brauchst, dann stoppe dabei die Zeit und versuche schneller zu werden.
+%Jetzt ist auch ein guter Zeitpunkt, um Dir ein paar Videos bezüglich Handhaltung und
+%Fingertricks anzuschauen. Damit machen die fortgeschrittenen Techniken auch gleich mehr Spass.
+%
+%Wir warten hier auf Dich! Versprochen!
+%
+%\input{fortgeschritten/neue_rotationen}
+%\input{fortgeschritten/gelbes_kreuz_abkuerzung}
+%\input{fortgeschritten/fisch_und_antifisch}
+%
+%% TODO: Jetzt vielleicht erst einmal Ua und Ub PLL
+%% TODO: Dann vielleicht H-Perm und Z-Perm?????
+%
+%\input{fortgeschritten/t_u_l_oll}
+%\input{fortgeschritten/pi_h_oll}
+
+\end{document}

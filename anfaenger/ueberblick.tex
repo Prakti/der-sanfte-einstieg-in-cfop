@@ -1,0 +1,143 @@
+\section{Überblick über die Anfängermethode}
+Um es zu Anfang einfacher zu haben, zerlegen wir die vier Phasen von CFOP jeweils nochmal in zwei Teilphasen.
+Wir stellen Dir jetzt diese acht Teilschritte samt Ergebnist einmal kurz vor.
+
+\emph{Ein Hinweis dabei:} bei Flächen die auf unseren Beispielen grau gefärbt sind ist uns die Farbe in dem Zwischenschritt egal.
+Das ermöglichet es uns, Dir die wesentlichen Aspekte der jeweiligen Phase zu zeigen.
+
+\paragraph{Cross (Kreuz):} \hfill \\[1em]
+\parbox{0.7\linewidth}{
+\textbf{Das Gänseblümchen:} Mit diesem Zwischenschritt macht man das Bilden des Kreuzes einfacher.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{W}{X}
+            {W}{Y}{W}
+            {X}{W}{X}%
+\RubikFaceFront{X}{X}{X}
+	       {X}{O}{X}
+	       {X}{X}{X}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {X}{X}{X}%
+\ShowCube{3cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+\parbox{0.7\linewidth}{
+\textbf{Das weiße Kreuz:} Jetzt machen wir daraus das Kreuz auf der weißen Seite, wobei die Kantensteine der Farbe des Kreuzes mit den Mittelsteinen der angrenzenden Seiten ausgerichtet werden.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{W}{X}
+            {W}{W}{W}
+            {X}{W}{X}%
+\RubikFaceFront{X}{O}{X}
+	       {X}{O}{X}
+	       {X}{X}{X}%
+\RubikFaceRight{X}{G}{X}
+	       {X}{G}{X}
+	       {X}{X}{X}%
+\ShowCube{3cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+\paragraph{F2L -- First 2 Layers (die ersten 2 Ebenen):}\hfill\\[1em]
+\parbox{0.7\linewidth}{
+\textbf{Die erste Ebene fertig stellen:} Nachdem das Kreuz fertig ist bringen wir die Ecksteine an ihre korrekte Stelle und richten sie aus.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{W}{W}{W}
+            {W}{W}{W}
+            {W}{W}{W}%
+\RubikFaceFront{O}{O}{O}
+	       {X}{O}{X}
+	       {X}{X}{X}%
+\RubikFaceRight{G}{G}{G}
+	       {X}{G}{X}
+	       {X}{X}{X}%
+\ShowCube{3cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+\parbox{0.7\linewidth}{
+\textbf{Die zweite Ebene fertig stellen:} Jetzt lösen wir die zweite Ebene indem wir die passenden Kantensteine an ihren Platz bringen.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{W}{W}{W}
+            {W}{W}{W}
+            {W}{W}{W}%
+\RubikFaceFront{O}{O}{O}
+	       {O}{O}{O}
+	       {X}{X}{X}%
+\RubikFaceRight{G}{G}{G}
+	       {G}{G}{G}
+	       {X}{X}{X}%
+\ShowCube{3cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+
+\paragraph{OLL -- Orientation of the Last Layer (Ausrichtung der letzten Schicht):}\hfill\\[1em]
+\parbox{0.7\linewidth}{
+  \textbf{Das gelbe Kreuz:} Als Erstes erzeugen wir ein gelbes Kreuz in der letzten Ebene
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{Y}
+            {X}{Y}{X}%
+\RubikFaceFront{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceRight{X}{X}{X}
+	       {O}{O}{O}
+	       {O}{O}{O}%
+\ShowCube{3cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+\parbox{0.7\linewidth}{
+  \textbf{Die gelbe Fläche:} Dann Vervollständigen wir die gelbe Fläche.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceRight{X}{X}{X}
+	       {O}{O}{O}
+	       {O}{O}{O}%
+\ShowCube{3cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+\paragraph{PLL -- Permutation of the Last Layer (Positionierung der letzten Schicht):}\hfill\\[1em]
+\parbox{0.7\linewidth}{
+  \textbf{Die Ecksteine an ihre Position bringen:} Hier sorgen wir erst für die korrekte Positionierung der Ecksteine der letzten Ebene.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{G}{X}{G}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceRight{O}{X}{O}
+	       {O}{O}{O}
+	       {O}{O}{O}%
+\ShowCube{3cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+\parbox{0.7\linewidth}{
+  \textbf{Die Kantensteine an ihre Position bringen:} Dann sorgen wir erst für die korrekte Positionierung der Kantensteine der letzten Ebene und damit ist der Würfel dann fertig gelöst.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{G}{G}{G}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceRight{O}{O}{O}
+	       {O}{O}{O}
+	       {O}{O}{O}%
+\ShowCube{3cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+
+
+Jetzt da Du einen groben Überblick hast, was wir so vor haben, erläutern wir jetzt jede dieser acht Phasen im Detail:

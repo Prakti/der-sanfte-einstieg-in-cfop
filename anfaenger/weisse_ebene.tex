@@ -1,0 +1,193 @@
+\section{Die weiße Ebene vervollständigen}
+\parbox{0.7\linewidth}{
+Wir vervollständigen jetzt die weiße Ebene, indem wir die Ecksteine um das Kreuz herum an ihre korrekte Position bringen.
+Dabei werden wir auch darauf achten, das die Ecksteine richtig ausgerichtet sind.
+Es soll nach diesem Schritt wie rechts abgebildet aussehen.
+
+\emph{Aber:} Wir werden die weiße Ebene "'auf den Kopf gestellt"' lösen.
+Das heißt: Du musst den Würfel so halten, dass die gelbe Seite oben ist.
+}\parbox{0.3\linewidth}{
+\RubikCubeGreyAll%
+\RubikFaceUpAll{W}%
+\RubikFaceFront{R}{R}{R}
+               {X}{R}{X}
+	       {X}{X}{X}%
+\RubikFaceRight{B}{B}{B}
+	       {X}{B}{X}
+	       {X}{X}{X}%
+\ShowCube{\linewidth}{0.4}{\DrawRubikCube}
+}\\[1em]
+Dieses "'auf dem Kopf gestellt lösen"' fühlt sich wahrscheinlich erst einmal umständlich an.
+Aber probier es bitte aus.
+Du wirst feststellen, dass Du auch durch ein leichtes Kippen des Würfels überprüfen kannst, ob Du gerade die weiße Ebene korrekt löst.
+
+Zudem hat diese Vorgehensweise mehrere Vorteile:
+Sie ist der Einstieg in eine sehr geläufige Bewegung, die in viele Algorithmen vorkommt.
+Und sie trainiert jetzt schon Dein intuitives Gefühl, um später die ersten zwei Ebenen in einer Phase zu lösen.
+Und dadurch dass Du jetzt alle Phasen mit der gelben Ebene nach oben ausführst, sparst Du Dir auch das Umdrehen des Würfels.
+Das ist jetzt vielleicht nicht so gravierend, spart Dir später aber ein bis zwei wertvolle Sekunden.\\[1em]
+\parbox{0.7\linewidth}{
+Mit der gelben Seite nach oben, soll der Würfel nach dieser Phase dann so aussehen:
+
+\emph{Hinweis:} die Balken unter dem Würfel zeigen die Farbe der verdeckten unteren Seite der vorderen Steine.
+}\parbox{0.3\linewidth}{
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{R}{X}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {G}{G}{G}%
+\RubikFaceDown{W}{W}{W}
+	      {W}{W}{W}
+	      {W}{W}{W}%
+\ShowCube{\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
+}\\[1em]
+
+Um die Platzierung der Ecksteine zu bestimmen, schaue dir die zwei Mittelsteine um die zu lösende Ecke an:\\[1em]
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{R}{X}
+	       {X}{R}{X}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {X}{G}{X}%
+\RubikFaceDown{X}{W}{X}
+	      {W}{W}{W}
+	      {X}{W}{X}%
+\ShowCube{\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
+
+In diesem Beispiel werden die Ecksteine die Farben Rot, Grün und Weiß haben.
+
+Bringe die Ecke über die Position, an die der Stein gelangen soll. Dazu drehst
+Du einfach die oberste (gelbe) Ebene. Es sollte dann so aussehen wie in einem der 3
+folgend dargestellten Fälle: \\[1em]
+
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{G}%
+\RubikFaceFront{X}{X}{R}
+               {X}{R}{X}
+	       {X}{R}{X}%
+\RubikFaceRight{W}{X}{X}
+	       {X}{G}{X}
+	       {X}{G}{X}%
+\RubikFaceDown{X}{W}{X}
+	      {W}{W}{W}
+	      {X}{W}{X}%
+\ShowCube{0.3\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
+%
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{W}%
+\RubikFaceFront{X}{X}{G}
+               {X}{R}{X}
+	       {X}{R}{X}%
+\RubikFaceRight{R}{X}{X}
+	       {X}{G}{X}
+	       {X}{G}{X}%
+\RubikFaceDown{X}{W}{X}
+	      {W}{W}{W}
+	      {X}{W}{X}%
+\ShowCube{0.3\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
+%
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{R}%
+\RubikFaceFront{X}{X}{W}
+               {X}{R}{X}
+	       {X}{R}{X}%
+\RubikFaceRight{G}{X}{X}
+	       {X}{G}{X}
+	       {X}{G}{X}%
+\RubikFaceDown{X}{W}{X}
+	      {W}{W}{W}
+	      {X}{W}{X}%
+\ShowCube{0.3\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
+\\[1em]
+Um diese Fälle zu lösen widerhole den Algorithmus
+\begin{center}
+  \Algo{R, U, Rp, Up}
+\end{center}
+bis die Ecke an der richtigen Stelle ist und die Farben auch richtig
+ausgerichtet sind.
+
+Gehe dann zu nächsten Ecke des weißen Kreuzes und bringe durch Drehen der
+obersten Ebene wieder eine passende Ecke darüber und wiederhole den Algorithmus.
+
+\subsection{Ein Sonderfall}
+Befindet sich die zu lösende Ecke bereits auf der untersten Ebene, ist aber
+nicht korrekt ausgerichtet (d. h. verdreht), wie unten gezeigt, wird die
+Wiederholung so lange durchgeführt (also \Algo{R, U, Rp, Up}), bis die Ecke korrekt
+ausgerichtet ist (d. h. nicht mehr falsch verdreht ist).\\[1em]
+
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{R}{X}
+	       {X}{R}{W}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {R}{G}{X}%
+\RubikFaceDown{X}{W}{G}
+	      {W}{W}{W}
+	      {X}{W}{X}%
+\ShowCube{0.5\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
+%
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{R}{X}
+	       {X}{R}{G}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {W}{G}{X}%
+\RubikFaceDown{X}{W}{R}
+	      {W}{W}{W}
+	      {X}{W}{X}%
+\ShowCube{0.5\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
+
+
+\subsection{Noch ein Sonderfall}
+Es kann vorkommen, dass eine Ecke sich auf der untersten (weißen) Ebene, aber an der falschen Ecke befindet:\\[1em]
+
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{B}{X}
+	       {X}{B}{G}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{R}{X}
+	       {W}{R}{X}%
+\RubikFaceDown{X}{W}{R}
+	      {W}{W}{W}
+	      {X}{W}{X}%
+\ShowCube{\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
+
+Dieses Problem löst Du, indem Du wie in den anderen Fällen
+\begin{center}
+\Algo{R, U, Rp, Up}
+\end{center}
+ausführst, um die Ecke auf die obere Ebene zu bekommen.
+Dort kannst Du die Ecke dann wie zuvor beschrieben über ihre Ziel-Ecke bringen und auch mit
+\begin{center}
+\Algo{R, U, Rp, Up}
+\end{center}
+lösen.
+
+\pagebreak

@@ -1,0 +1,147 @@
+\section{Begriffe}
+
+Damit Du alle Anleitungen und Hinweise in dieser Anleitung auch gut verstehen kannst, erklären wir Dir erst einmal ein paar Begriffe.
+Dazu gehört die grundlegende Struktur des Würfels, wie die Seiten in dem Würfel benannt werden und wie man die weiter unten vorgestellten Algorithmen liest.
+In der Speedcubing Szene ist ein Algorithmus eine Abfolge von Drehungen um ein bestimmtes Ergebnis zu erzielen.
+Algorithmen bestehen oft aus vier bis neun Zügen.
+Schau gerne nach jedem der folgenden Abschnitte einmal nach, ob Du das Vorgestellte am Würfel nachvollziehen kannst.
+
+\subsection{Steine}
+
+Ein Rubik's Würfel wird aus drei Arten von Steinen zusammen gesetzt. \\[1em]
+
+\parbox{0.3\linewidth}{
+  \centering
+  \textbf{Mittelsteine}\\[1em] \RubikCubeGreyWY\ShowCube{2cm}{0.4}{\DrawRubikCube}
+}
+\parbox{0.7\linewidth}{
+Das besondere an den Mittelsteinen ist, dass sie \emph{niemals} ihre Position verlassen können.
+Im gelösten Zustand haben alle Flächen einer Seite die gleiche Farbe wie der Mittelstein.
+Jeder der Seiten dreht sich um ihren Mittelstein.
+}\\[1em]
+\parbox{0.3\linewidth}{
+  \centering
+  \textbf{Kantensteine}\\[1em]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{W}{X}
+	{W}{X}{W}
+	{X}{W}{X}%
+  \RubikFaceFront{X}{O}{X}
+	   {O}{X}{O}
+	   {X}{O}{X}%
+  \RubikFaceRight{X}{G}{X}
+	   {G}{X}{G}
+	   {X}{G}{X}%
+  \ShowCube{2cm}{0.4}{\DrawRubikCube}
+}
+\parbox{0.7\linewidth}{
+  Die Kantensteine bestehen aus 2 Farben.
+}\\[1em]
+\parbox{0.3\linewidth}{
+  \centering
+  \textbf{Ecksteine}\\[1em]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{W}{X}{W}
+	{X}{X}{X}
+	{W}{X}{W}%
+  \RubikFaceFront{O}{X}{O}
+	   {X}{X}{X}
+	   {O}{X}{O}%
+  \RubikFaceRight{G}{X}{G}
+	   {X}{X}{X}
+	   {G}{X}{G}%
+  \ShowCube{2cm}{0.4}{\DrawRubikCube}
+}
+\parbox{0.7\linewidth}{
+  Die Ecksteine bestehen aus 3 Farben.
+}
+
+\subsection{Rotationen}
+Wie bereits in der Einleitung erwähnt, nennen wir die Techniken, mit denen wir jetzt schrittweise den Würfel lösen, Algorithmen.
+Zu jedem der oben erwähnten vier bis acht Teilproblemen gibt es mindestens einen Algorithmus, um es zu lösen.
+
+Jeder Algorithmus ist im Endeffekt eine Reihe von spezifischen Drehungen, welche wir mit Buchstaben beschreiben werden.
+
+Wir werden jetzt alle für den Anfang notwendigen Drehungen und ihre Bezeichnung einmal vorstellen.
+Damit Du ein besseres Bild vor Augen hast zeigen wir Dir hier einmal den teilweise aufgefalteten Würfel aus den Beispielen:\\[1em]
+
+\RubikCubeSolved%
+\ShowCube{\linewidth}{0.4}{\DrawRubikCubeSF}\\[1em]
+
+Wie man sieht, ist die gelbe Farbe auf der Unterseite, die blaue links und die rote Farbe hinten!
+
+\begin{instruction}{Rechte Seite im Uhrzeigersinn}
+  \vspace{1.3em}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{R}\RubikRotation{R}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}
+\hfil
+\begin{instruction}{Rechte Seite gegen den Uhrzeigersinn}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{Rp}\RubikRotation{Rp}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}\\[5em]
+\begin{instruction}{Linke Seite im Uhrzeigersinn}
+  \vspace{1.3em}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{L}\RubikRotation{L}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}
+\hfil
+\begin{instruction}{Linke Seite gegen den Uhrzeigersinn}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{Lp}\RubikRotation{Lp}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}
+\\[5em]
+\begin{instruction}{Obere Seite im Uhrzeigersinn}
+  \vspace{1.3em}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{U}\RubikRotation{U}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}
+\hfil
+\begin{instruction}{Obere Seite gegen den Uhrzeigersinn}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{Up}\RubikRotation{Up}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}
+\\[5em]
+\begin{instruction}{Vorne im Uhrzeigersinn}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{F}\RubikRotation{F}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}
+\hfil
+\begin{instruction}{Vorne gegen den Uhrzeigersinn}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{Fp}\RubikRotation{Fp}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}
+\\[5em]
+\begin{instruction}{Unten im Uhrzeigersinn}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{D}\RubikRotation{D}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}
+\hfil
+\begin{instruction}{Unten gegen den Uhrzeigersinn}
+  \RubikCubeSolved%
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+  \quad\Rubik{Dp}\RubikRotation{Dp}
+  \ShowCube{15mm}{0.4}{\DrawRubikCube}%
+\end{instruction}
+\\[2em]
+
+Nimm Dir jetzt auch ruhig einmal Deinen Würfel zur Hand und probier ein wenig aus.
+Das hilft Dir ein Gefühl für die Drehungen zu entwickeln und Dich später nicht zu verhaspeln.

@@ -1,0 +1,126 @@
+\section{Die zweite Ebene fertig stellen}
+\parbox{0.7\linewidth}{
+In diesem Schritt geht es darum, die richtigen Kantensteine in die mittlere Ebene zu bekommen.
+Nach diesem Schritt hast Du die beiden ersten Ebenen von des Würfels gelöst.
+Das sieht dann so aus wie rechts abgebildet:
+}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{0.3\linewidth}{0.4}{\DrawRubikCubeRU}\\[1em]
+
+Halte den Würfel so, dass die weiße Seite unten ist.
+Suche dann einen Kantenstein auf der oberen Ebene, der keine gelbe Seite hat.
+In diesem Beispiel haben wir einen Kantenstein mit den Farben Rot und Grün gefunden.
+
+Wenn Du einen Kantenstein gefunden hast, der nicht gelb ist, drehe die obere Ebene so lange, bis du auf einer Seite des Würfels ein umgedrehtes „T" siehst.
+Auf dem Bild oben ist es ein rotes T, aber es hätte auch ein blaues, orangefarbenes oder grünes sein können. 
+Die Seite mit dem T sollte Dir zugewandt sein.
+
+\subsection{Bewegen nach Rechts}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{G}{X}%
+\RubikFaceFront{X}{R}{X}
+               {X}{R}{X}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {G}{G}{G}%
+\ShowCube{0.3\linewidth}{0.4}{%
+  \DrawRubikCubeRU%
+  \draw[thick,->,color=black] (1.5,2.5) -- (2.5, 1.5);
+}
+\parbox{0.7\linewidth}{
+  In diesem Fall soll die Kante nach \textbf{rechts} bewegt werden, da die andere
+  Farbe des Kantensteins grün ist. Um den Kantenstein rechts von der mittleren
+  Ebene nach unten zu bekommen, führe den folgenden Algorithmus aus:
+}
+\begin{center}
+\Algo{U, R, Up, Rp, Up, Fp, U, F}.
+\end{center}
+
+
+\subsection{Bewegen nach Links}
+Nachdem du ein T gebildet hast, wirst du feststellen, dass in einigen Fällen
+das zu lösende Kantenstück auf die linke Seite muss, wie in der Abbildung oben
+gezeigt.\\[1em]
+
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{B}{X}%
+\RubikFaceFront{X}{R}{X}
+               {X}{R}{X}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {G}{G}{G}%
+\ShowCube{0.3\linewidth}{0.4}{%
+  \DrawRubikCubeRU%
+  \draw[thick,->,color=black] (1.5,2.5) -- (0.5, 1.5);
+}
+\parbox{0.7\linewidth}{
+  In diesem Beispiel soll ein Kantenstein mit den Farben Rot und Blau links von
+  der mittleren Ebene platziert werden. Um dieses Problem zu lösen, führe den
+  Algorithmus in umgekehrter Reihenfolge aus, wie wir ihn in diesem Schritt
+  vorgestellt haben. Der Algorithmus sieht dann folgendermaßen aus:
+}
+\begin{center}
+\Algo{Up, Lp, U, L, U, F, Up, Fp}
+\end{center}
+
+\subsection{Sonderfälle}
+
+\parbox{0.7\linewidth}{
+  \paragraph{Situation 1}
+  Der Kantenstein ist an der richtigen Position aber spiegelverkert ausgerichtet.\\[1em]
+}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{R}{G}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {R}{G}{X}
+	       {G}{G}{G}%
+\ShowCube{0.3\linewidth}{0.4}{%
+  \DrawRubikCubeRU%
+}\\[1em]
+%%
+\parbox{0.7\linewidth}{
+  \paragraph{Situation 2}
+  Der Kantenstein ist an der falschen Stelle innerhalb der mittleren Ebene.\\[1em]
+}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{O}{G}
+	       {O}{O}{O}%
+\RubikFaceRight{X}{X}{X}
+	       {R}{G}{X}
+	       {G}{G}{G}%
+\ShowCube{0.3\linewidth}{0.4}{%
+  \DrawRubikCubeRU%
+}\\[1em]
+
+Um diese Sonderfälle zu lösen, suche Dir zunächst einen Kantenstein mit einer
+gelben Seite und bringe ihn so in Position als würdest Du ihn gerne nach links
+oder nach rechts an die Stelle bringen wo jetzt der unpassende Kantenstein ist.
+Führe den passenden Algorithmus aus, um den gelben Kantenstein an diese Position
+zu bringen. Damit ist dann der andere Stein in der oberen Ebene und kann wie
+oben dargestellt mit einem der beiden Algorithmen eingebaut werden.
+
+Jetzt haben wir die ersten zwei Ebenen fertig und damit das "'F"' der CFOP Methode abgehakt.

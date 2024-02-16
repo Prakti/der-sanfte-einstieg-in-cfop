@@ -1,0 +1,141 @@
+\section{Orientierung der gelben Ecken}
+\parbox{0.7\linewidth}{
+In diesem Schritt komplettieren wir das "'O"' von CFOP indem wir die Ecken um das Kreuz herum so orientieren, dass sich eine gelbe Fläche ergibt. 
+Ob die anderen Farben stimmen ist jetzt noch nicht wichtig. 
+Darum kümmern wir uns später.
+
+Folgende Fälle sind möglich:
+}
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{X}{X}{X}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{X}{X}{X}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{0.3\linewidth}{0.4}{%
+  \DrawRubikCubeRU
+}\\[1em]
+
+\paragraph{Fall 1}
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{X}{X}{X}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{X}{X}{X}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+Alle Ecken sind bereits richtig orientiert. Hier sind wir dierekt fertig.
+
+\paragraph{Fall 2}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{Y}
+            {Y}{Y}{X}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{X}{X}{X}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{X}{X}{X}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+Eine Ecke ist richtig orientiert. Hier dreht man den Würfel so, dass diese
+Ecke vorne links liegt und führt dann den Algorithmus
+\begin{center}
+	\Algo{R, U, Rp, Up, R, U, U, Rp}
+\end{center}
+aus. Danach schaut man wieder welcher Fall nun vorliegt.
+
+\paragraph{Fall 3}
+Beispiel:
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {X}{Y}{X}%
+\RubikFaceFront{Y}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{X}{X}{X}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{X}{X}{X}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+Genau Zwei Ecken sind richtig orientiert. Dabei ist es unwichtig welches Muster sie konkret ergeben.
+In diesem Fall dreht man den Würfel so, dass eine falsche Ecke vorne links liegt und mit
+der gelben Seite zu einem zeigt. Dann wendet man wieder den Algorithmus aus Fall 2 an:
+\begin{center}
+  \Algo{R, U, Rp, Up, R, U, U, Rp}
+\end{center}
+aus. Danach schaut man erneut welcher Fall nun vorliegt.
+
+\paragraph{Fall 4}
+Beispiel:
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{Y}
+            {X}{Y}{X}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{X}{X}{Y}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{X}{X}{X}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+Keine Ecke ist richtig orientiert. Such Dir eine falsche Ecke und dreh den Würfel so,
+dass sie vorne links liegt und mit ihrer gelben Seite nach links zeit. .
+Wende wieder den Algorithmus aus Fall 2 an:
+\begin{center}
+  \Algo{R, U, Rp, Up, R, U, U, Rp}
+\end{center}
+aus. Danach schaut man erneut welcher Fall nun vorliegt.
+
+Sobald wir in Fall 1 angekommen sind haben wir das "'O"' von CFOP fertig und
+können in die letzte Phase gehen.

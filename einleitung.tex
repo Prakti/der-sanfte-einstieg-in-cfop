@@ -1,0 +1,91 @@
+Diese Anleitung zielt darauf ab, es jedem Anfänger zu ermöglichen überhaupt einen Rubik's Würfel zu lösen.
+Dabei wollen wir aber auch gleichzeitig die bestmöglichen Grundlagen legen, um später immer schneller darin zu werden.
+Deshalb orientieren wir uns direkt an den Schritten und Zwischenergebnissen einer beliebten Speedcubing Methode: CFOP.
+
+Damit Du Dir am Anfang nur ganz wenige Algorithmen merken musst, werden wir mit einer stark abgespeckten Variante dieser Methode anfangen.
+
+Mit zunehmender Sicherheit wirst Du dann anfangen schneller zu werden und an die Grenzen der Anfängermethode stoßen.
+Mit der Übung werden Dir Abläufe als Umständlich erscheinen und Du wirst Dir wünschen, mehrere Schritte in einem zu erledigen.
+Hier wollen wir Dir mit diesem Leitfaden die Möglichkeite geben, Stück für Stück neue Algorithmen dazu zu nehmen, bis Du CFOP vollständig beherrschst.
+
+Die CFOP-Methode basiert auf der Idee, dass sich jedes Problem einfach und wiederholbar lösen lässt, indem man es in Teilprobleme zerlegt, welche man dann einzeln löst.
+Der Begriff CFOP leitet sich von den vier Teilprobleme ab in die das gesamte Lösen des Würfels zerlegt wird.
+Es ist ein Akronym für Cross, F2L (First 2 Layers), OLL (Orientation of the Last Layer) und PLL (Permutation of the Last Layer):\\[1em]
+\parbox{0.7\linewidth}{
+\textbf{Cross (Kreuz):} Zuerst wird ein Kreuz auf einer der Würfelseiten erstellt, wobei die Kantensteine der Farbe des Kreuzes mit den Mittelsteinen der angrenzenden Seiten ausgerichtet werden.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{W}{X}
+            {W}{W}{W}
+            {X}{W}{X}%
+\RubikFaceFront{X}{O}{X}
+	       {X}{O}{X}
+	       {X}{X}{X}%
+\RubikFaceRight{X}{G}{X}
+	       {X}{G}{X}
+	       {X}{X}{X}%
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+\parbox{0.7\linewidth}{
+\textbf{F2L -- First 2 Layers (die ersten 2 Ebenen):}
+In diesem Schritt werden die ersten zwei Ebenen des Würfels gleichzeitig gelöst, indem Ecken und Kanten gepaart und an ihren Platz gebracht werden.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{W}{W}{W}
+            {W}{W}{W}
+            {W}{W}{W}%
+\RubikFaceFront{O}{O}{O}
+	       {O}{O}{O}
+	       {X}{X}{X}%
+\RubikFaceRight{G}{G}{G}
+	       {G}{G}{G}
+	       {X}{X}{X}%
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+\parbox{0.7\linewidth}{
+  \textbf{OLL -- Orientation of the Last Layer (Ausrichtung der letzten Schicht):}
+  Hier werden alle Steine der letzten Ebene so gedreht, dass die Oberseite eine einheitliche Farbe hat, ohne dabei die bereits gelösten Ebenen zu stören.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceRight{X}{X}{X}
+	       {O}{O}{O}
+	       {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+\parbox{0.7\linewidth}{
+  \textbf{PLL -- Permutation of the Last Layer (Positionierung der letzten Schicht):} 
+  Im letzten Schritt werden die Steine der letzten Ebene in ihre endgültige Position gebracht, wodurch der Würfel vollständig gelöst wird.
+}\parbox{0.3\linewidth}{
+\centering
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{G}{G}{G}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceRight{O}{O}{O}
+	       {O}{O}{O}
+	       {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+
+Für den Anfang werden wir jedes dieser Teilprobleme noch zusätzlich zerlegen, sodass wir den Würfel in insgesamt acht Phasen lösen.
+Das ermöglicht es uns, mit nur einem kleinen Satz an Algorithmen für die Lösung der acht Teilprobleme auszukommen.
+
+Ich spreche hier immer von 'wir' obwohl ich das Buch gerade alleine schreibe.
+Das liegt daran, dass ich gerade Ideen und Algorithmen von ganz vielen Menschen aufnehme und entlang meiner eigenen Lernerfahrungen aufschreibe.
+
+Viele Personen waren an der Entwicklung von CFOP beteiligt.
+Vollständig dokumentiert wurde die Methode als erstes von Anneke Treep und Kurt Dockhorn im Jahr 1981.
+Weiter systematisiert und popularisiert wurde CFOP von der tschechischen Speedcuberin Jessica Fridrich.
+Bis heute benutzen viele berühmte Speedcuber wie Feliks Zemdegs oder Max Park diese Methoden, bzw. eine Weiterentwicklung davon.

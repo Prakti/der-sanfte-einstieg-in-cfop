@@ -1,0 +1,103 @@
+\section{Positionierung der gelben Kantensteine}
+Dies ist die zweite Stufe des "'P"' Schrittes in CFOP.
+Der Würfel müsste jetzt ungefähr so aussehen:
+\begin{center}
+  \RubikCubeGreyAll%
+  \RubikFaceUp{Y}{Y}{Y}
+	      {Y}{Y}{Y}
+	      {Y}{Y}{Y}%
+  \RubikFaceFront{R}{X}{R}
+		 {R}{R}{R}
+		 {R}{R}{R}%
+  \RubikFaceRight{G}{X}{G}
+		 {G}{G}{G}
+		 {G}{G}{G}%
+  \RubikFaceLeft{B}{X}{B}
+		{B}{B}{B}
+		{B}{B}{B}%
+  \RubikFaceBack{O}{X}{O}
+		{O}{O}{O}
+		{O}{O}{O}%
+  \ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+  \ShowCube{2.5cm}{0.4}{\DrawRubikFaceUpSide}
+\end{center}
+
+Nur noch die gelben Kantensteine sind möglicherweise an der Falschen Position. Hier
+haben wir wieder mehrere Fälle zu beachten:
+
+\paragraph{Fall 1}
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{R}{G}{R}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{G}{B}{G}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{B}{R}{B}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{O}{O}{O}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+Ein \emph{einziger} Kantenstein ist richtig. Wir halten jetzt den Würfel so, dass
+die richtige Kante hinten liegt und wenden dann den folgenden Algorithmus an:
+\begin{center}
+  \Algo{R, Up, R, U, R, U, R, Up, Rp, Up, R, R}
+\end{center}
+
+\paragraph{Fall 2}
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{R}{G}{R}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{G}{O}{G}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{B}{R}{B}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{O}{B}{O}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+\emph{Kein} Kantenstein ist richtig. Hier wenden wir wieder den Algorithmus aus
+Fall1 an und schauen dann erneut.
+\begin{center}
+  \Algo{R, Up, R, U, R, U, R, Up, Rp, Up, R, R}
+\end{center}
+
+\paragraph{Fall 3}
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{R}{R}{R}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{G}{G}{G}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{B}{B}{B}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{O}{O}{O}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+Alle vier Kanten sind richtig. Herzlichen Glückwunsch, der Würfel ist gelöst.

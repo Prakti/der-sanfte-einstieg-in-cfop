@@ -1,0 +1,113 @@
+\section{Positionierung der gelben Ecksteine}
+Jetzt sind wir in der "'P"' Phase von CFOP angekommen, und müssen wir noch die gelben Steine so auf der obersten Schicht hin und
+her "'schieben"', dass alle Farben ringsherum korrekt sind.
+Als Erstes kümmern wir uns um die Ecksteine und dafür hält man zunächst
+Ausschau nach sogenannten "'Scheinwerfern"', d.h. nach zwei Ecken,
+bei denen die Farben auf einer Seitenfläche übereinstimmen. Die Farben der
+Kanten sind dabei zunächst egal.
+
+Im folgenden Beispiel sieht man zwei rote "'Scheinwerfer"' die sich auch
+zufällig auf der roten Seite befinden:
+
+\begin{center}
+  \RubikCubeGreyAll%
+  \RubikFaceUp{Y}{Y}{Y}
+	      {Y}{Y}{Y}
+	      {Y}{Y}{Y}%
+  \RubikFaceFront{R}{B}{R}
+		 {R}{R}{R}
+		 {R}{R}{R}%
+  \RubikFaceRight{G}{R}{O}
+		 {G}{G}{G}
+		 {G}{G}{G}%
+  \RubikFaceLeft{O}{O}{B}
+		{B}{B}{B}
+		{B}{B}{B}%
+  \RubikFaceBack{G}{G}{B}
+		{O}{O}{O}
+		{O}{O}{O}%
+  \ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+  \ShowCube{2.5cm}{0.4}{\DrawRubikFaceUpSide}
+\end{center}
+
+Damit ergeben sich für uns die folgenden Fälle:
+
+\paragraph{Fall 1}
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{B}{X}{B}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{R}{X}{R}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{O}{X}{O}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{G}{X}{G}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+Scheinwerfer sind auf allen vier Seiten. Hier drehen wir jetzt die obere
+Schicht so lange bis die Scheinwerfer mit den Farben der Seite übereinstimmen
+und gehen dann zum nächsten Schritt.
+
+\paragraph{Fall 2}
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{R}{X}{R}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{X}{X}{X}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{X}{X}{X}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+Scheinwerfer sind auf \emph{einer einzigen} Seite. Hier drehen wir die
+Scheinwerfer zunächst so, dass sie nach rechts zeigen und wenden dann den
+folgenden Algorithmus an:
+\begin{center}
+  \Algo{Fp, L, Fp, R, R, F, Lp, Fp, R, R, F, F}
+\end{center}
+
+\paragraph{Fall 3}
+\RubikCubeGreyAll%
+\RubikFaceUp{Y}{Y}{Y}
+            {Y}{Y}{Y}
+            {Y}{Y}{Y}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\RubikFaceLeft{X}{X}{X}
+	      {B}{B}{B}
+	      {B}{B}{B}%
+\RubikFaceBack{X}{X}{X}
+	      {O}{O}{O}
+	      {O}{O}{O}%
+\ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikFaceUpSide
+}\\[1em]
+Es sind gar keine Scheinwerfer vorhanden. Wir wenden den selben Algorithmus
+wie in Fall 2 an und schauen erneut:
+\begin{center}
+  \Algo{Fp, L, Fp, R, R, F, Lp, Fp, R, R, F, F}
+\end{center}

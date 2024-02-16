@@ -1,0 +1,58 @@
+\section{Das weiße Kreuz}
+\parbox{0.7\linewidth}{
+In nächsten Schritt soll ein weißes Kreuz gebildet werden, wie auf dem folgenden Bild zu sehen ist.
+Um ein weißes Kreuz zu bilden, müssen die vier weißen Kantensteine um den weißen Mittelstein platziert werden.
+}\parbox{0.3\linewidth}{
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{W}{X}
+	      {W}{W}{W}
+	      {X}{W}{X}%
+  \RubikFaceFront{X}{R}{X}
+		 {X}{R}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{B}{X}
+		 {X}{B}{X}
+		 {X}{X}{X}%
+  \ShowCube{5cm}{0.4}{\DrawRubikCube}
+}\\[1em]
+
+Wie in der Illustration eben gezeigt, geht es dabei auch darum, dass die weißen Kantensteine des Kreuzes zu den Mittelsteinen der vier angrenzenden Flächen passen.
+Also weiß-rot zu rot, weiß-blau zu blau, weiß-grün zu weiß-grün, weiß-orange zu orange.
+
+Dies bewerkstelligen wir jetzt, indem wir die Oberseite des Würfels drehen, bis der weiße Kantenstein mit seiner anderen Farbe zum angrenzenden Mittelstein einer Seite passt.
+Dann drehe diese Seite um 180°.
+Im folgenden Beispiel haben wir das einmal für die grüne Seite gezeigt:\\[1em]
+
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{W}{X}
+            {W}{Y}{W}
+            {X}{W}{X}%
+\RubikFaceFront{X}{B}{X}
+               {X}{R}{X}
+	       {X}{X}{X}%
+\RubikFaceRight{X}{G}{X}
+	       {X}{G}{X}
+	       {X}{X}{X}%
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+\quad\Rubik{R}\RubikRotation{R}
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+\quad\Rubik{R}\RubikRotation{R}
+\ShowCube{2cm}{0.4}{\DrawRubikCube}\\[1em]
+
+Damit hast Du den ersten Stein im weißen Kreuz gelöst.
+Wiederhole dies für die anderen 3 Steine, um das komplette weiße Kreuz auf dem Würfel zu erzielen.
+Am Ende soll der Würfel dann so aussehen:\\[1em]
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{R}{X}
+	       {X}{R}{X}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {X}{G}{X}%
+\ShowCube{5cm}{0.4}{\DrawRubikCube}\\[1em]
+
+Jetzt haben wir das "'C"' der CFOP Methode abgehakt und kümmern uns nacheinander um die
+Fertigstellung der ersten und danach der zweiten Schicht.

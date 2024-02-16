@@ -1,0 +1,90 @@
+\section{Das gelbe Kreuz}
+\parbox{0.7\linewidth}{
+  Als Nächstes geht es uns darum, die letzte, gelbe Ebene so auszurichten, dass alle gelben Flächen in die richtige Richtung zeigen. 
+  Wie angekündigt machen wir das in zwei Schritten.
+  Der erste Schritt hat das Ziel, ein gelbes Kreuz zu bilden.
+  Mit anderen Worten: Alle vier gelben Kantensteine sollen mit ihrer gelben Seite nach oben zeigen.
+}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{Y}
+            {X}{Y}{X}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{0.3\linewidth}{0.4}{%
+  \DrawRubikCubeRU%
+}\\[1em]
+
+Sobald die ersten zwei Ebenen des Würfels gelöst sind, kann man auf einen der vier folgenden Fälle stoßen:
+
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{Y}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{Y}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikCubeRU%
+}
+$\Longrightarrow$
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{Y}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{Y}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikCubeRU%
+}
+$\Longrightarrow$
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {Y}{Y}{Y}
+            {X}{X}{X}%
+\RubikFaceFront{X}{Y}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikCubeRU%
+}
+$\Longrightarrow$
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{Y}
+            {X}{Y}{X}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikCubeRU%
+}\\[1em]
+
+Der vierte Fall ist das gesuchte gelbe Kreuz.
+Manchmal ist man ohne etwas tun zu müssen in dieser Situation und ist direkt fertig.
+Für die anderen drei Fälle wendest Du den Algorithmus \\[1em]
+\begin{center}
+  \Algo{F, R, U, Rp, Up, Fp}
+\end{center}
+an.
+
+Wie durch die Pfeile in der Abbildung gezeigt bringt dies den Würfel von einer der Situationen zur nächsten.
+Zwischendurch musst Du den Würfel immer wieder so drehen, dass er passend zu Dir ausgerichtet ist. 
+Die obige Abbildung zeigt Dir die korrekte Ausrichtung für jeden der drei Fälle.

@@ -1,0 +1,79 @@
+\section{Das Gänseblümchen}
+
+\parbox{0.7\linewidth}{
+  Um einen Rubik's Cube zu lösen, muss im ersten Schritt ein Gänseblümchen auf der Seite mit dem gelben Mittelstein gebildet werden.
+  Dein Ziel ist es, die vier weißen Kantensteine nach oben zu verschieben, sodass sie den gelben Mittelstein umgeben, wie rechts abgebildet gezeigt:\\[1em]
+} \parbox{0.3\linewidth}{
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{W}{X}
+	      {W}{Y}{W}
+	      {X}{W}{X}%
+  \RubikFaceFront{X}{X}{X}
+		 {X}{R}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{X}
+		 {X}{G}{X}
+		 {X}{X}{X}%
+  \ShowCube{3cm}{0.4}{\DrawRubikCube}\\[1em]
+}
+
+Die ersten 3 Kantensteine sind relativ einfach nach oben zu bekommen.
+Hier musst Du einfach etwas experimentieren.
+Das schaffst Du, da sind wir uns ganz sicher!
+
+Der letzte Kantenstein kann jedoch etwas kniffliger sein.
+Im Folgenden zeigen wir dir drei mögliche Fälle und wie man sie löst.
+Bedenke bitte: es sind nur Lösungsvorschläge.
+Da noch kaum etwas vom Würfel gelöst ist, kann man nicht viel kaputt machen.
+Entsprechend gibt es viel Spielraum für das verschrieben von Steinen.
+
+\paragraph{Fall 1}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{W}{X}
+            {W}{Y}{X}
+            {X}{W}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{R}{W}
+	       {X}{X}{X}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {X}{X}{X}%
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+\quad\Rubik{R}\RubikRotation{R}
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+
+\paragraph{Fall 2}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{W}{X}
+            {W}{Y}{W}
+            {X}{X}{X}%
+\RubikFaceFront{X}{X}{X}
+               {X}{R}{W}
+	       {X}{X}{X}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {X}{X}{X}%
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+\quad\Rubik{Up}\RubikRotation{Up}
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+\quad\Rubik{R}\RubikRotation{R}
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+
+\paragraph{Fall 3}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{W}{X}
+            {W}{Y}{W}
+            {X}{X}{X}%
+\RubikFaceFront{X}{W}{X}
+               {X}{R}{X}
+	       {X}{X}{X}%
+\RubikFaceRight{X}{X}{X}
+	       {X}{G}{X}
+	       {X}{X}{X}%
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+\quad\Rubik{F}\RubikRotation{F}
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+\quad\Rubik{Up}\RubikRotation{Up}
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
+\quad\Rubik{R}\RubikRotation{R}
+\ShowCube{2cm}{0.4}{\DrawRubikCube}
