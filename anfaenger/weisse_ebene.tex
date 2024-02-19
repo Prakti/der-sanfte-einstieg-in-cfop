@@ -21,6 +21,7 @@ Dieses "'auf dem Kopf gestellt lösen"' fühlt sich wahrscheinlich erst einmal u
 Aber probier es bitte aus.
 Du wirst feststellen, dass Du auch durch ein leichtes Kippen des Würfels überprüfen kannst, ob Du gerade die weiße Ebene korrekt löst.
 
+\enlargethispage{\baselineskip}
 Zudem hat diese Vorgehensweise mehrere Vorteile:
 Sie ist der Einstieg in eine sehr geläufige Bewegung, die in viele Algorithmen vorkommt.
 Und sie trainiert jetzt schon Dein intuitives Gefühl, um später die ersten zwei Ebenen in einer Phase zu lösen.
@@ -47,7 +48,6 @@ Mit der gelben Seite nach oben, soll der Würfel nach dieser Phase dann so ausse
 \ShowCube{\linewidth}{0.4}{\DrawRubikCubeRU \DrawRubikCubeSidebarFD{RU}}
 }
 
-\pagebreak
 Um die Platzierung der Ecksteine zu bestimmen, schaue dir die zwei Mittelsteine um die zu lösende Ecke an:\\[1em]
 \RubikCubeGreyAll%
 \RubikFaceUp{X}{X}{X}
@@ -124,7 +124,6 @@ ausgerichtet sind.
 Gehe dann zu nächsten Ecke des weißen Kreuzes und bringe durch Drehen der
 obersten Ebene wieder eine passende Ecke darüber und wiederhole den Algorithmus.
 
-\pagebreak
 \subsection{Ein Sonderfall}
 Es kann vorkommen, dass sich die zu lösende Ecke bereits auf der untersten Ebene befindet, aber nicht korrekt ausgerichtet (d.h. verdreht) ist.
 Auch in diesem Fall wenden wir den oben beschriebenen Algorithmus an und wiederholen ihn, bis die Ecke korrekt gelöst ist:
@@ -184,8 +183,5 @@ Dieses Problem lösen wir wieder mit dem oben bereits beschriebenen Algorithmus:
 \begin{center}
 \Algo{R, U, Rp, Up}
 \end{center}
-Diesmal wenden wir ihn einmal an um den Ecksteine auf die oberste Ebezu bekommen.
-Dann verschieben wir ihn über seine Ziel-Ecke und wenden wieder den gewohnten Algorithmus an um ihn dort korrekt zu platzieren.
-Dort kannst Du die Ecke dann wie zuvor beschrieben über ihre Ziel-Ecke bringen und auch mit
-
-\pagebreak
+Diesmal wenden wir ihn einmal an, um den Ecksteine auf die oberste Ebene zu bekommen.
+Dann verschieben wir ihn über seine Ziel-Ecke und wenden wieder den gewohnten Algorithmus an, um ihn dort korrekt zu platzieren.

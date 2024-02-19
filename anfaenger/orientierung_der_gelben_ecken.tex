@@ -1,3 +1,4 @@
+\selectlanguage{ngerman}
 \section{Orientierung der gelben Ecken}
 \parbox{0.7\linewidth}{
 In diesem Schritt komplettieren wir das "'O"' von CFOP indem wir die Ecken um das Kreuz herum so orientieren, sodass sich eine gelbe Fläche ergibt.
@@ -47,7 +48,7 @@ Folgende Fälle sind möglich:
 \ShowCube{2.5cm}{0.4}{%
   \DrawRubikFaceUpSide
 }\\[1em]
-Alle Ecken sind bereits richtig orientiert. Hier sind wir dierekt fertig.
+Alle Ecken sind bereits richtig orientiert. Hier sind wir direkt fertig.
 
 \paragraph{Fall 2}
 \RubikCubeGreyAll%
@@ -70,13 +71,13 @@ Alle Ecken sind bereits richtig orientiert. Hier sind wir dierekt fertig.
 \ShowCube{2.5cm}{0.4}{%
   \DrawRubikFaceUpSide
 }\\[1em]
-Eine Ecke ist richtig orientiert. Hier dreht man den Würfel so, dass diese
-Ecke vorne links liegt und führt dann den Algorithmus
+Eine Ecke ist richtig orientiert. Hier dreht man den Würfel so, dass diese Ecke vorne links liegt und führt dann den folgenden Algorithmus aus:
 \begin{center}
-	\Algo{R, U, Rp, Up, R, U, U, Rp}
+	\sffamily\Large (\Algo{R, U, Rp, Up}) (\Algo{R, U, U, Rp})
 \end{center}
-aus. Danach schaut man wieder welcher Fall nun vorliegt.
+Danach schaut man wieder welcher Fall nun vorliegt.
 
+\pagebreak
 \paragraph{Fall 3}
 Beispiel:
 \RubikCubeGreyAll%
@@ -103,9 +104,9 @@ Genau Zwei Ecken sind richtig orientiert. Dabei ist es unwichtig welches Muster 
 In diesem Fall dreht man den Würfel so, dass eine falsche Ecke vorne links liegt und mit
 der gelben Seite zu einem zeigt. Dann wendet man wieder den Algorithmus aus Fall 2 an:
 \begin{center}
-  \Algo{R, U, Rp, Up, R, U, U, Rp}
+	\sffamily\Large (\Algo{R, U, Rp, Up}) (\Algo{R, U, U, Rp})
 \end{center}
-aus. Danach schaut man erneut welcher Fall nun vorliegt.
+Dann schaut man erneut welcher Fall nun vorliegt.
 
 \paragraph{Fall 4}
 Beispiel:
@@ -133,9 +134,9 @@ Keine Ecke ist richtig orientiert. Such Dir eine falsche Ecke und dreh den Würf
 dass sie vorne links liegt und mit ihrer gelben Seite nach links zeit. .
 Wende wieder den Algorithmus aus Fall 2 an:
 \begin{center}
-  \Algo{R, U, Rp, Up, R, U, U, Rp}
+	\sffamily\Large (\Algo{R, U, Rp, Up}) (\Algo{R, U, U, Rp})
 \end{center}
-aus. Danach schaut man erneut welcher Fall nun vorliegt.
+Anschließend schaut man wieder welcher Fall vorliegt.
 
 Sobald wir in Fall 1 angekommen sind haben wir das "'O"' von CFOP fertig und
 können in die letzte Phase gehen.

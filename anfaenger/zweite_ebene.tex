@@ -1,3 +1,4 @@
+\selectlanguage{ngerman}
 \section{Die zweite Ebene fertig stellen}
 \parbox{0.7\linewidth}{
 In diesem Schritt geht es darum, die richtigen Kantensteine in die mittlere Ebene zu bekommen.
@@ -20,8 +21,8 @@ Halte den Würfel so, dass die weiße Seite unten ist.
 Suche dann einen Kantenstein auf der oberen Ebene, der keine gelbe Seite hat.
 In diesem Beispiel haben wir einen Kantenstein mit den Farben Rot und Grün gefunden.
 
-Wenn Du einen Kantenstein gefunden hast, der nicht gelb ist, drehe die obere Ebene so lange, bis du auf einer Seite des Würfels ein umgedrehtes „T" siehst.
-Auf dem Bild oben ist es ein rotes T, aber es hätte auch ein blaues, orangefarbenes oder grünes sein können. 
+Wenn Du einen Kantenstein gefunden hast, der nicht gelb ist, drehe die obere Ebene so lange, bis du auf einer Seite des Würfels ein umgedrehtes "'T"' siehst.
+Auf dem Bild oben ist es ein rotes T, aber es hätte auch ein blaues, orangefarbenes oder grünes sein können.
 Die Seite mit dem T sollte Dir zugewandt sein.
 
 \subsection{Bewegen nach Rechts}
@@ -45,15 +46,13 @@ Die Seite mit dem T sollte Dir zugewandt sein.
   Ebene nach unten zu bekommen, führe den folgenden Algorithmus aus:
 }
 \begin{center}
-\Algo{U, R, Up, Rp, Up, Fp, U, F}.
+	\sffamily\Large (\Algo{U, R, Up, Rp}) (\Algo{Up, Fp, U, F})
 \end{center}
-
+\emph{Hinweis:} die Klammerung dient hierbei nur der Übersichtlichkeit und haben sonst keine Bedeutung.
 
 \subsection{Bewegen nach Links}
 Nachdem du ein T gebildet hast, wirst du feststellen, dass in einigen Fällen
-das zu lösende Kantenstück auf die linke Seite muss, wie in der Abbildung oben
-gezeigt.\\[1em]
-
+das zu lösende Kantenstück auf die linke Seite und nicht auf die rechte Seite muss.\\[1em]
 \RubikCubeGreyAll%
 \RubikFaceUp{X}{X}{X}
             {X}{Y}{X}
@@ -75,7 +74,7 @@ gezeigt.\\[1em]
   vorgestellt haben. Der Algorithmus sieht dann folgendermaßen aus:
 }
 \begin{center}
-\Algo{Up, Lp, U, L, U, F, Up, Fp}
+	\sffamily\Large (\Algo{Up, Lp, U, L}) (\Algo{U, F, Up, Fp})
 \end{center}
 
 \subsection{Sonderfälle}

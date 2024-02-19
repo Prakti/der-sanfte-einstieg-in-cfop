@@ -1,1 +1,93 @@
+\selectlanguage{ngerman}
 \section{Eine Abkürzung für das gelbe Kreuz}
+Die vier Fälle auf dem Weg zum gelben Kreuz sind Dir jetzt bestimmt geläufig:\\[1em]
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{Y}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{Y}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikCubeRU%
+}
+$\Longrightarrow$
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{Y}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{Y}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikCubeRU%
+}
+$\Longrightarrow$
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {Y}{Y}{Y}
+            {X}{X}{X}%
+\RubikFaceFront{X}{Y}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikCubeRU%
+}
+$\Longrightarrow$
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{Y}
+            {X}{Y}{X}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.4}{%
+  \DrawRubikCubeRU%
+}\\[1em]
+
+Wir können mit dem Folgenden Algorithmus von Fall 2 direkt zu Fall 4 kommen indem wir den Würfel wie folgt halten und dann folgenden Algorithmus anwenden:
+\begin{center}
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{X}{X}
+	      {X}{Y}{Y}
+	      {X}{Y}{X}%
+  \RubikFaceFront{X}{X}{X}
+		 {R}{R}{R}
+		 {R}{R}{R}%
+  \RubikFaceRight{X}{X}{X}
+		 {G}{G}{G}
+		 {G}{G}{G}%
+  \ShowCube{2.5cm}{0.4}{%
+    \DrawRubikCubeRU%
+  }
+  $\Longrightarrow$
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{Y}{X}
+	      {Y}{Y}{Y}
+	      {X}{Y}{X}%
+  \RubikFaceFront{X}{X}{X}
+		 {R}{R}{R}
+		 {R}{R}{R}%
+  \RubikFaceRight{X}{X}{X}
+		 {G}{G}{G}
+		 {G}{G}{G}%
+  \ShowCube{2.5cm}{0.4}{%
+    \DrawRubikCubeRU%
+  }\\[2em]
+  \sffamily\Large (\Algo{Fw, R, U}) (\Algo{Rp, Up, Fwp})
+\end{center}
+
+Das ist quasi der selbe Algorithmus wie aus der Anfängermethode, nur dass die beiden Drehungen der Front breiter sind.
+Damit kann man gleich Zeit sparen ohne sich viel merken zu müssen. Ist doch Super!

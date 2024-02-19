@@ -1,3 +1,4 @@
+\selectlanguage{ngerman}
 \section{Positionierung der gelben Ecksteine}
 Jetzt sind wir in der "'P"' Phase von CFOP angekommen, und müssen die gelben Steine so auf der obersten Schicht hin und her "'schieben"', dass alle Farben ringsherum korrekt sind.
 
@@ -5,7 +6,6 @@ Zunächst etwas Begriffsklärung: wenn zwei Ecksteine der letzten Ebene auf eine
 Welche Farbe diese beiden Seiten dabei haben ist egal.
 
 Im folgenden Beispiel sieht man zwei rote "'Scheinwerfer"' die sich auch zufällig auf der roten Seite befinden:
-
 \begin{center}
   \RubikCubeGreyAll%
   \RubikFaceUp{Y}{Y}{Y}
@@ -77,9 +77,12 @@ Wir drehen jetzt die obere Schicht so lange bis die Scheinwerfer mit den Farben 
 Scheinwerfer sind auf \emph{einer einzigen} Seite. 
 Hier drehen wir die Scheinwerfer zunächst so, dass sie nach links zeigen und wenden dann den folgenden Algorithmus an:
 \begin{center}
-  \Algo{R, U, Rp, Up, Rp, F, R, R, Up, Rp, Up, R, U, Rp, Fp}
+	\sffamily\Large
+	(\Algo{R, U, Rp, Up}) (\Algo{Rp, F, R}) \\[1em]
+	(\Algo{R, Up, Rp, Up}) (\Algo{R, U, Rp, Fp})
 \end{center}
 
+\pagebreak
 \paragraph{Fall 3}
 \RubikCubeGreyAll%
 \RubikFaceUp{Y}{Y}{Y}
@@ -104,5 +107,7 @@ Hier drehen wir die Scheinwerfer zunächst so, dass sie nach links zeigen und we
 Es sind gar keine Scheinwerfer vorhanden. Wir wenden den selben Algorithmus
 wie in Fall 2 an und schauen erneut:
 \begin{center}
-  \Algo{R, U, Rp, Up, Rp, F, R, R, Up, Rp, Up, R, U, Rp, Fp}
+	\sffamily\Large
+	(\Algo{R, U, Rp, Up}) (\Algo{Rp, F, R}) \\[1em]
+	(\Algo{R, Up, Rp, Up}) (\Algo{R, U, Rp, Fp})
 \end{center}

@@ -1,7 +1,7 @@
 \section{Das Gänseblümchen}
 
 \parbox{0.7\linewidth}{
-  Um einen Rubik's Cube zu lösen, muss im ersten Schritt ein Gänseblümchen auf der Seite mit dem gelben Mittelstein gebildet werden.
+  Um das weißte Kreuz einfacher erzeugen zu können, bilden wir im ersten Schritte ein Gänseblümchen auf der Seite mit dem gelben Mittelstein.
   Dein Ziel ist es, die vier weißen Kantensteine nach oben zu verschieben, sodass sie den gelben Mittelstein umgeben, wie rechts abgebildet gezeigt:\\[1em]
 } \parbox{0.3\linewidth}{
   \RubikCubeGreyAll%
@@ -14,7 +14,7 @@
   \RubikFaceRight{X}{X}{X}
 		 {X}{G}{X}
 		 {X}{X}{X}%
-  \ShowCube{3cm}{0.4}{\DrawRubikCube}\\[1em]
+  \ShowCube{\linewidth}{0.4}{\DrawRubikCube}
 }
 
 Die ersten drei Kantensteine sind relativ einfach nach oben zu bekommen.
@@ -23,7 +23,7 @@ Das schaffst Du, da sind wir uns ganz sicher!
 
 Der letzte Kantenstein kann jedoch etwas kniffliger sein.
 Im Folgenden zeigen wir dir drei mögliche Fälle und wie man sie löst.
-\emph{Bedenke bitte:} es sind nur Lösungsvorschläge.
+\emph{Bedenke bitte:} es sind nur Lösungsvorschläge; es gibt auch andere Möglichkeiten.
 Da noch kaum etwas vom Würfel gelöst ist, kann man nicht viel kaputt machen.
 Entsprechend gibt es viel Spielraum für das verschrieben von Steinen.
 
@@ -39,7 +39,7 @@ Entsprechend gibt es viel Spielraum für das verschrieben von Steinen.
 	       {X}{G}{X}
 	       {X}{X}{X}%
 \ShowCube{2cm}{0.4}{\DrawRubikCube}
-\quad\Rubik{R}\RubikRotation{R}
+\Rubik{R}\RubikRotation{R}
 \ShowCube{2cm}{0.4}{\DrawRubikCube}
 
 \paragraph{Fall 2}
@@ -54,9 +54,9 @@ Entsprechend gibt es viel Spielraum für das verschrieben von Steinen.
 	       {X}{G}{X}
 	       {X}{X}{X}%
 \ShowCube{2cm}{0.4}{\DrawRubikCube}
-\quad\Rubik{Up}\RubikRotation{Up}
+\Rubik{Up}\RubikRotation{Up}
 \ShowCube{2cm}{0.4}{\DrawRubikCube}
-\quad\Rubik{R}\RubikRotation{R}
+\Rubik{R}\RubikRotation{R}
 \ShowCube{2cm}{0.4}{\DrawRubikCube}
 
 \paragraph{Fall 3}
@@ -71,9 +71,9 @@ Entsprechend gibt es viel Spielraum für das verschrieben von Steinen.
 	       {X}{G}{X}
 	       {X}{X}{X}%
 \ShowCube{2cm}{0.4}{\DrawRubikCube}
-\quad\Rubik{F}\RubikRotation{F}
+\Rubik{F}\RubikRotation{F}
 \ShowCube{2cm}{0.4}{\DrawRubikCube}
-\quad\Rubik{Up}\RubikRotation{Up}
+\Rubik{Up}\RubikRotation{Up}
 \ShowCube{2cm}{0.4}{\DrawRubikCube}
-\quad\Rubik{R}\RubikRotation{R}
+\Rubik{R}\RubikRotation{R}
 \ShowCube{2cm}{0.4}{\DrawRubikCube}

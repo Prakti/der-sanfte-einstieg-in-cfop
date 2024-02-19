@@ -1,0 +1,258 @@
+\selectlanguage{ngerman}
+\section{Die gelbe Ebene in einem Schritt fertig ausrichten}
+Nachdem das gelbe Kreuz fertig ist, ergeben sich sieben mögliche Muster, die alle miteinander zusammenhängen.
+
+In der Anfängermethode haben wir gelernt wie wir diese Muster mit einem Algorithmus ineinander überführen, bis wir bei der fertigen Ebene 'raus kommen.
+Konkret hängen diese Muster folgendermaßen miteinander zusammen:\\[1em]
+\parbox{0.2\linewidth}{
+  \centering
+  \textbf{T} \\[1ex]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{Y}{Y}
+	      {Y}{Y}{Y}
+	      {X}{Y}{Y}%
+  \RubikFaceFront{Y}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{X}{X}{Y}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{1.5cm}{0.35}{%
+    \DrawRubikFaceUpSide
+  }\\[1em]
+  \textbf{U} \\[1ex]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{Y}{Y}{Y}
+	      {Y}{Y}{Y}
+	      {X}{Y}{X}%
+  \RubikFaceFront{Y}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{1.5cm}{0.35}{%
+    \DrawRubikFaceUpSide
+  }\\[1em]
+  \textbf{L} \\[1ex]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{Y}{Y}{X}
+	      {Y}{Y}{Y}
+	      {X}{Y}{Y}%
+  \RubikFaceFront{Y}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{1.5cm}{0.35}{%
+    \DrawRubikFaceUpSide
+  }
+}
+$\Longrightarrow$
+\parbox{0.2\linewidth}{
+\begin{center}
+  \textbf{Anti-Fisch} \\[1ex]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{Y}{Y}
+	      {Y}{Y}{Y}
+	      {X}{Y}{X}%
+  \RubikFaceFront{Y}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{Y}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{Y}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{1.5cm}{0.35}{%
+    \DrawRubikFaceUpSide
+  }
+\end{center}
+}
+$\Longrightarrow$
+\parbox{0.2\linewidth}{
+\begin{center}
+  \textbf{Fisch} \\[1ex]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{Y}{X}
+	      {Y}{Y}{Y}
+	      {Y}{Y}{X}%
+  \RubikFaceFront{X}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{X}{X}{Y}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{1.5cm}{0.35}{%
+    \DrawRubikFaceUpSide
+  }
+\end{center}
+}
+$\Longrightarrow$
+\parbox{0.2\linewidth}{
+\begin{center}
+  \textbf{Fertig} \\[1ex]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{Y}{Y}{Y}
+	      {Y}{Y}{Y}
+	      {Y}{Y}{Y}%
+  \RubikFaceFront{X}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{1.5cm}{0.35}{%
+    \DrawRubikFaceUpSide
+  }
+\end{center}
+}\\[3em]
+Und dann auch noch so:\\[1em]
+\parbox{0.2\linewidth}{
+  \begin{center}
+    \textbf{H} \\[1ex]
+    \RubikCubeGreyAll%
+    \RubikFaceUp{X}{Y}{X}
+		{Y}{Y}{Y}
+		{X}{Y}{X}%
+    \RubikFaceFront{X}{X}{X}
+		   {X}{X}{X}
+		   {X}{X}{X}%
+    \RubikFaceRight{Y}{X}{Y}
+		   {X}{X}{X}
+		   {X}{X}{X}%
+    \RubikFaceLeft{Y}{X}{Y}
+		  {X}{X}{X}
+		  {X}{X}{X}%
+    \RubikFaceBack{X}{X}{X}
+		  {X}{X}{X}
+		  {X}{X}{X}%
+    %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+    \ShowCube{1.5cm}{0.35}{%
+      \DrawRubikFaceUpSide
+    }
+  \end{center}
+  \begin{center}
+    \textbf{Pi} \\[1ex]
+    \RubikCubeGreyAll%
+    \RubikFaceUp{X}{Y}{X}
+		{Y}{Y}{Y}
+		{X}{Y}{X}%
+    \RubikFaceFront{X}{X}{Y}
+		   {X}{X}{X}
+		   {X}{X}{X}%
+    \RubikFaceRight{X}{X}{X}
+		   {X}{X}{X}
+		   {X}{X}{X}%
+    \RubikFaceLeft{Y}{X}{Y}
+		  {X}{X}{X}
+		  {X}{X}{X}%
+    \RubikFaceBack{Y}{X}{X}
+		  {X}{X}{X}
+		  {X}{X}{X}%
+    %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+    \ShowCube{1.5cm}{0.35}{%
+      \DrawRubikFaceUpSide
+    }
+  \end{center}
+}
+$\Longrightarrow$
+\parbox{0.2\linewidth}{
+\begin{center}
+  \textbf{Fisch} \\[1ex]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{Y}{X}
+	      {Y}{Y}{Y}
+	      {Y}{Y}{X}%
+  \RubikFaceFront{X}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{X}{X}{Y}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{1.5cm}{0.35}{%
+    \DrawRubikFaceUpSide
+  }
+\end{center}
+}
+$\Longrightarrow$
+\parbox{0.2\linewidth}{
+\begin{center}
+  \textbf{Fertig} \\[1ex]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{Y}{Y}{Y}
+	      {Y}{Y}{Y}
+	      {Y}{Y}{Y}%
+  \RubikFaceFront{X}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{1.5cm}{0.35}{%
+    \DrawRubikFaceUpSide
+  }
+\end{center}
+}\\[2em]
+
+Den Algorithmus, um vom \textbf{Fisch}-Muster zur fertigen Fläche zu kommen, haben wir bereits in der Anfängermethode gelernt.
+Wir können jetzt Stück für Stück weitere Algorithmen dazu nehmen, welche dann auch aus einem der Muster direkt die fertige Fläche erzeugen.
+
+Die Muster \textbf{T}, \textbf{U} und \textbf{L} sind nach der Anfängermethode am weitesten von der fertigen Fläche weg.
+Hier kann man also die meisten Schritte sparen, wenn man die dazu gehörigen Algorithmen lernt.
+Anschließend lohnt es sich die \textbf{H} und \textbf{Pi} Fälle zu lernen und zum Schluss den \textbf{Anti-Fisch}.
