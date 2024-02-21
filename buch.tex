@@ -12,9 +12,13 @@
 \usepackage{tikz}
 \usepackage{rubikcube,rubikrotation,rubikpatterns}
 
+\usetikzlibrary{positioning}
+
 \newcommand{\Algo}[1]{\ShowSequence{\ }{\textRubik}{#1}}
 \newcommand{\Sexy}{(\Algo{R, U, Rp, Up})\ }
-\newcommand{\Train}[1]{{\sffamily\small Training Scramble:} \\ {\ttfamily\footnotesize #1}}
+\newcommand{\Train}[1]{%
+	\parbox{0.3\linewidth}{\sffamily\small Training Scramble:}\parbox{0.7\linewidth}{\ttfamily\footnotesize #1}%
+}
 
 \newenvironment{instruction}[1]{%
   \begin{minipage}{0.45\linewidth} %

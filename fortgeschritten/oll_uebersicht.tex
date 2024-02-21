@@ -1,62 +1,199 @@
 \selectlanguage{ngerman}
 \section{Die gelbe Ebene in einem Schritt fertig ausrichten}
-Nachdem das gelbe Kreuz fertig ist, ergeben sich sieben mögliche Muster, die alle miteinander zusammenhängen.
+Beim gelben Kreuz haben wir fürs Erste alles Optimiert was geht.
+Aber jetzt, auf dem Weg zur gelben Ebene, können wir einiges Optimieren.
 
-In der Anfängermethode haben wir gelernt wie wir diese Muster mit einem Algorithmus ineinander überführen, bis wir bei der fertigen Ebene 'raus kommen.
-Konkret hängen diese Muster folgendermaßen miteinander zusammen:\\[1em]
-\parbox{0.2\linewidth}{
-  \centering
-  \textbf{T} \\[1ex]
-  \RubikCubeGreyAll%
-  \RubikFaceUp{X}{Y}{Y}
-	      {Y}{Y}{Y}
-	      {X}{Y}{Y}%
-  \RubikFaceFront{Y}{X}{X}
-		 {X}{X}{X}
-		 {X}{X}{X}%
-  \RubikFaceRight{X}{X}{X}
-		 {X}{X}{X}
-		 {X}{X}{X}%
-  \RubikFaceLeft{X}{X}{X}
-		{X}{X}{X}
-		{X}{X}{X}%
-  \RubikFaceBack{X}{X}{Y}
-		{X}{X}{X}
-		{X}{X}{X}%
-  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
-  \ShowCube{1.5cm}{0.35}{%
-    \DrawRubikFaceUpSide
-  }\\[1em]
-  \textbf{U} \\[1ex]
+Hat man jetzt das gelbe Kreuz fertig, können sich acht mögliche Muster ergeben.
+
+Zwei für den Fall, dass keine gelbe Ecke korrekt ausgerichtet ist\footnote{Ist manchmal zufällig der Fall!}:
+\parbox{0.5\linewidth}{
+	\begin{center}
+		\textbf{H}\\[1ex]
+		\RubikCubeGreyAll%
+		\RubikFaceUp{X}{Y}{X}
+		{Y}{Y}{Y}
+		{X}{Y}{X}%
+		\RubikFaceFront{X}{X}{X}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceRight{Y}{X}{Y}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceLeft{Y}{X}{Y}
+			{X}{X}{X}
+			{X}{X}{X}%
+		\RubikFaceBack{X}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		%\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+		\ShowCube{1.5cm}{0.35}{%
+			\DrawRubikFaceUpSide
+		}
+	\end{center}
+}\parbox{0.5\linewidth}{
+	\begin{center}
+		\textbf{Pi}\\[1ex]
+		\RubikCubeGreyAll%
+		\RubikFaceUp{X}{Y}{X}
+		{Y}{Y}{Y}
+		{X}{Y}{X}%
+		\RubikFaceFront{X}{X}{Y}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceRight{X}{X}{X}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceLeft{Y}{X}{Y}
+			{X}{X}{X}
+			{X}{X}{X}%
+		\RubikFaceBack{Y}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		%\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+		\ShowCube{1.5cm}{0.35}{%
+			\DrawRubikFaceUpSide
+		}
+	\end{center}
+}
+
+Zwei für den Fall, dass eine gelbe Ecke korrekt ausgerichtet ist:
+\parbox{0.5\linewidth}{
+	\begin{center}
+		\textbf{Anti-Fisch} \\[1ex]
+		\RubikCubeGreyAll%
+		\RubikFaceUp{X}{Y}{Y}
+					{Y}{Y}{Y}
+					{X}{Y}{X}%
+		\RubikFaceFront{Y}{X}{X}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceRight{Y}{X}{X}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceLeft{Y}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		\RubikFaceBack{X}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		%\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+		\ShowCube{1.5cm}{0.35}{%
+			\DrawRubikFaceUpSide
+		}
+	\end{center}
+}\parbox{0.5\linewidth}{
+	\begin{center}
+		\textbf{Fisch} \\[1ex]
+		\RubikCubeGreyAll%
+		\RubikFaceUp{X}{Y}{X}
+					{Y}{Y}{Y}
+					{Y}{Y}{X}%
+		\RubikFaceFront{X}{X}{Y}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceRight{X}{X}{Y}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceLeft{X}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		\RubikFaceBack{X}{X}{Y}
+			{X}{X}{X}
+			{X}{X}{X}%
+		%\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+		\ShowCube{1.5cm}{0.35}{%
+			\DrawRubikFaceUpSide
+		}
+	\end{center}
+}
+
+Drei für den Fall, dass zwei gelbe Ecken korrekt ausgerichtet sind:
+\parbox{0.3\linewidth}{
+	\begin{center}
+		\textbf{T} \\[1ex]
+		\RubikCubeGreyAll%
+		\RubikFaceUp{X}{Y}{Y}
+					{Y}{Y}{Y}
+					{X}{Y}{Y}%
+		\RubikFaceFront{Y}{X}{X}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceRight{X}{X}{X}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceLeft{X}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		\RubikFaceBack{X}{X}{Y}
+			{X}{X}{X}
+			{X}{X}{X}%
+		%\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+		\ShowCube{1.5cm}{0.35}{%
+			\DrawRubikFaceUpSide
+		}
+	\end{center}
+}\parbox{0.3\linewidth}{
+	\begin{center}
+		\textbf{U} \\[1ex]
+		\RubikCubeGreyAll%
+		\RubikFaceUp{Y}{Y}{Y}
+					{Y}{Y}{Y}
+					{X}{Y}{X}%
+		\RubikFaceFront{Y}{X}{Y}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceRight{X}{X}{X}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceLeft{X}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		\RubikFaceBack{X}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		%\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+		\ShowCube{1.5cm}{0.35}{%
+			\DrawRubikFaceUpSide
+		}
+	\end{center}
+}\parbox{0.3\linewidth}{
+	\begin{center}
+		\textbf{L} \\[1ex]
+		\RubikCubeGreyAll%
+		\RubikFaceUp{Y}{Y}{X}
+					{Y}{Y}{Y}
+					{X}{Y}{Y}%
+		\RubikFaceFront{Y}{X}{X}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceRight{X}{X}{Y}
+			 {X}{X}{X}
+			 {X}{X}{X}%
+		\RubikFaceLeft{X}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		\RubikFaceBack{X}{X}{X}
+			{X}{X}{X}
+			{X}{X}{X}%
+		%\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+		\ShowCube{1.5cm}{0.35}{%
+			\DrawRubikFaceUpSide
+		}
+	\end{center}
+}
+
+Eins für den Fall, dass alle gelben Ecken korrekt ausgerichtet sind:
+\parbox{\linewidth}{
+\begin{center}
+  \textbf{Fertig} \\[1ex]
   \RubikCubeGreyAll%
   \RubikFaceUp{Y}{Y}{Y}
 	      {Y}{Y}{Y}
-	      {X}{Y}{X}%
-  \RubikFaceFront{Y}{X}{Y}
+	      {Y}{Y}{Y}%
+  \RubikFaceFront{X}{X}{X}
 		 {X}{X}{X}
 		 {X}{X}{X}%
   \RubikFaceRight{X}{X}{X}
-		 {X}{X}{X}
-		 {X}{X}{X}%
-  \RubikFaceLeft{X}{X}{X}
-		{X}{X}{X}
-		{X}{X}{X}%
-  \RubikFaceBack{X}{X}{X}
-		{X}{X}{X}
-		{X}{X}{X}%
-  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
-  \ShowCube{1.5cm}{0.35}{%
-    \DrawRubikFaceUpSide
-  }\\[1em]
-  \textbf{L} \\[1ex]
-  \RubikCubeGreyAll%
-  \RubikFaceUp{Y}{Y}{X}
-	      {Y}{Y}{Y}
-	      {X}{Y}{Y}%
-  \RubikFaceFront{Y}{X}{X}
-		 {X}{X}{X}
-		 {X}{X}{X}%
-  \RubikFaceRight{X}{X}{Y}
 		 {X}{X}{X}
 		 {X}{X}{X}%
   \RubikFaceLeft{X}{X}{X}
@@ -69,11 +206,83 @@ Konkret hängen diese Muster folgendermaßen miteinander zusammen:\\[1em]
   \ShowCube{1.5cm}{0.35}{%
     \DrawRubikFaceUpSide
   }
-}
-$\Longrightarrow$
-\parbox{0.2\linewidth}{
+\end{center}
+}\\[3em]
+
+In der Anfängermethode sind uns die Muster bereits begegnet, wir haben sie nur nicht bewusst wahrgenommen.
+Und wir haben in der Anfängermethode bereits den Fall gelernt, um aus dem \textbf{Fisch}-Muster die fertige gelbe Fläche zu machen.
+Zusätzlich nutzen wir aber auch diesen Algorithmus, um die anderen Muster Schritt für Schritt in das \textbf{Fisch}-Muster zu überführen:
 \begin{center}
-  \textbf{Anti-Fisch} \\[1ex]
+	\begin{tikzpicture}[nodes={draw, thick, rounded corners, font=\bfseries}]
+		\node[] (T) {T};
+		\node[] (U) [above=of T] {U};
+		\node[] (L) [below=of T] {L};
+		\node[] (Antifisch) [right=of T] {Anti-Fisch};
+		\node[] (Fisch) [right=of Antifisch] {Fisch};
+		\node[] (Pi) [above=of Fisch] {Pi};
+		\node[] (H) [below=of Fisch] {H};
+		\node[] (Fertig) [right=of Fisch] {Fertig};
+
+		\draw[->] (T) to [out=0, in=180] (Antifisch);
+		\draw[->] (U) to [out=0, in=90] (Antifisch);
+		\draw[->] (L) to [out=0, in=270] (Antifisch);
+		\draw[->] (Antifisch) to (Fisch);
+		\draw[->] (Pi) to [out=270, in=90] (Fisch);
+		\draw[->] (H) to (Fisch);
+		\draw[->] (Fisch) to (Fertig);
+	\end{tikzpicture}
+\end{center}
+
+Hier können wir jetzt immer mehr Abkürzungen einbauen.
+Denn es gibt für jedes der sechs übrigen Muster einen Algorithmus, mit denen man aus ihnen die gelbe Fläche machen kann.
+Diese kannst Du jetzt sukzessive lernen.
+Hast Du für ein Muster den Algorithmus noch nicht auswendig gelernt, greif einfach auf die Anfängermethode zurück, die ist voll kompatibel!
+Mit welchem Muster Du anfangen willst, das ist Dir überlassen.
+
+Damit Du einen Algorithmus auch effektiv üben kannst, musst Du immer wieder das passende Muster herstellen.
+Dafür haben wir Dir zusätzlich immer noch einen sogenannten "'Training Scramble"' unter dem Algorithmus abgedruckt.
+Nimm dazu einen gelösten Würfel und halte ihn mit der gelben Ebene nach oben.
+Führe dann die Drehungen aus dem "'Training Scramble"' aus, um das gesuchte Muster zum Üben herzustellen.
+
+Wenn Du bei einer gelben Fläche anfängst und einen Algorithmus zwei bis drei Mal wiederholst wirst Du auch wieder bei der gelben Fläche ankommen.
+Damit kann man auch ohne einen "'Training Scramble"' einen Algorithmus wiederholen, bis man ihn sicher beherrscht.
+Am besten ist es zudem, wenn so ein Algorithmus im Muskelgedächtnis verankert ist.
+Dann muss man kaum bewusst darüber nachdenken, denn die Finger wissen quasi schon selber was sie zu tun haben.
+\\[1em]
+%
+\parbox{0.3\linewidth}{
+	\centering
+	\textbf{Fisch} \\[1ex]
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{Y}{X}
+	      {Y}{Y}{Y}
+	      {Y}{Y}{X}%
+  \RubikFaceFront{X}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{X}{X}{Y}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{\linewidth}{0.35}{%
+    \DrawRubikFaceUpSide
+  }
+}%
+\parbox{0.7\linewidth}{
+	(\Algo{R, U, Rp, U}) \\[1em] (\Algo{R, U, U, Rp})
+}\\[1em]
+\Train{Up, Bp, Up, B, Up, Bp, U2, B, Up, B2, R2, L, U, L, Up L2, D, L2, Dp, R2, B2} \\[3em]
+%
+%
+\parbox{0.3\linewidth}{
+\begin{center}
+	\textbf{Anti-Fisch} \\[1ex]
   \RubikCubeGreyAll%
   \RubikFaceUp{X}{Y}{Y}
 	      {Y}{Y}{Y}
@@ -95,25 +304,30 @@ $\Longrightarrow$
     \DrawRubikFaceUpSide
   }
 \end{center}
-}
-$\Longrightarrow$
-\parbox{0.2\linewidth}{
+}%
+\parbox{0.7\linewidth}{
+	(\Algo{R, U, U, Rp, Up}) \\[1em] (\Algo{R, Up, Rp})
+}\\[1em]
+\Train{U' L' D' R D L' D' R U R2 U' L2 F2 U' L2 B2 L2 F2 R2}\\[3em]
+%
+%
+\parbox{0.3\linewidth}{
 \begin{center}
-  \textbf{Fisch} \\[1ex]
+  \textbf{H} \\
   \RubikCubeGreyAll%
   \RubikFaceUp{X}{Y}{X}
 	      {Y}{Y}{Y}
-	      {Y}{Y}{X}%
-  \RubikFaceFront{X}{X}{Y}
+	      {X}{Y}{X}%
+  \RubikFaceFront{X}{X}{X}
 		 {X}{X}{X}
 		 {X}{X}{X}%
-  \RubikFaceRight{X}{X}{Y}
+  \RubikFaceRight{Y}{X}{Y}
 		 {X}{X}{X}
 		 {X}{X}{X}%
-  \RubikFaceLeft{X}{X}{X}
+  \RubikFaceLeft{Y}{X}{Y}
 		{X}{X}{X}
 		{X}{X}{X}%
-  \RubikFaceBack{X}{X}{Y}
+  \RubikFaceBack{X}{X}{X}
 		{X}{X}{X}
 		{X}{X}{X}%
   %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
@@ -121,16 +335,23 @@ $\Longrightarrow$
     \DrawRubikFaceUpSide
   }
 \end{center}
-}
-$\Longrightarrow$
-\parbox{0.2\linewidth}{
+}%
+\parbox{0.7\linewidth}{
+	(\Algo{R, U, Rp, U}) \\[1em]
+	(\Algo{R, Up, Rp, U}) \\[1em]
+  (\Algo{R, U, U, Rp})
+}\\[1em]
+\Train{U' L B L' B2 R B' R B2 L2 F2 U2 B2 D' B2 U L2 B2 D' B2}\\[3em]
+%
+%
+\parbox{0.3\linewidth}{
 \begin{center}
-  \textbf{Fertig} \\[1ex]
+  \textbf{L} \\
   \RubikCubeGreyAll%
-  \RubikFaceUp{Y}{Y}{Y}
+  \RubikFaceUp{Y}{Y}{X}
 	      {Y}{Y}{Y}
-	      {Y}{Y}{Y}%
-  \RubikFaceFront{X}{X}{X}
+	      {X}{Y}{Y}%
+  \RubikFaceFront{Y}{X}{X}
 		 {X}{X}{X}
 		 {X}{X}{X}%
   \RubikFaceRight{X}{X}{Y}
@@ -147,68 +368,57 @@ $\Longrightarrow$
     \DrawRubikFaceUpSide
   }
 \end{center}
-}\\[3em]
-Und dann auch noch so:\\[1em]
-\parbox{0.2\linewidth}{
-  \begin{center}
-    \textbf{H} \\[1ex]
-    \RubikCubeGreyAll%
-    \RubikFaceUp{X}{Y}{X}
-		{Y}{Y}{Y}
-		{X}{Y}{X}%
-    \RubikFaceFront{X}{X}{X}
-		   {X}{X}{X}
-		   {X}{X}{X}%
-    \RubikFaceRight{Y}{X}{Y}
-		   {X}{X}{X}
-		   {X}{X}{X}%
-    \RubikFaceLeft{Y}{X}{Y}
-		  {X}{X}{X}
-		  {X}{X}{X}%
-    \RubikFaceBack{X}{X}{X}
-		  {X}{X}{X}
-		  {X}{X}{X}%
-    %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
-    \ShowCube{1.5cm}{0.35}{%
-      \DrawRubikFaceUpSide
-    }
-  \end{center}
-  \begin{center}
-    \textbf{Pi} \\[1ex]
-    \RubikCubeGreyAll%
-    \RubikFaceUp{X}{Y}{X}
-		{Y}{Y}{Y}
-		{X}{Y}{X}%
-    \RubikFaceFront{X}{X}{Y}
-		   {X}{X}{X}
-		   {X}{X}{X}%
-    \RubikFaceRight{X}{X}{X}
-		   {X}{X}{X}
-		   {X}{X}{X}%
-    \RubikFaceLeft{Y}{X}{Y}
-		  {X}{X}{X}
-		  {X}{X}{X}%
-    \RubikFaceBack{Y}{X}{X}
-		  {X}{X}{X}
-		  {X}{X}{X}%
-    %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
-    \ShowCube{1.5cm}{0.35}{%
-      \DrawRubikFaceUpSide
-    }
-  \end{center}
-}
-$\Longrightarrow$
-\parbox{0.2\linewidth}{
+}%
+\parbox{0.7\linewidth}{
+	(\Algo{F, Rp, Fp, Rw}) \\[1em] (\Algo{U, R, Up, Rwp})
+}\\[1em]
+\Train{U L U' F2 U F2 U L R2 U' L2 U' L2 U2 L2 F2 U F2 U R2}\\[3em]
+%
+%
+\parbox{0.3\linewidth}{
 \begin{center}
-  \textbf{Fisch} \\[1ex]
+  \textbf{Pi} \\
   \RubikCubeGreyAll%
   \RubikFaceUp{X}{Y}{X}
 	      {Y}{Y}{Y}
-	      {Y}{Y}{X}%
+	      {X}{Y}{X}%
   \RubikFaceFront{X}{X}{Y}
 		 {X}{X}{X}
 		 {X}{X}{X}%
-  \RubikFaceRight{X}{X}{Y}
+  \RubikFaceRight{X}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceLeft{Y}{X}{Y}
+		{X}{X}{X}
+		{X}{X}{X}%
+  \RubikFaceBack{Y}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+  %\ShowCube{2cm}{0.35}{\DrawRubikCubeRU}
+  \ShowCube{1.5cm}{0.35}{%
+    \DrawRubikFaceUpSide
+  }
+\end{center}
+}%
+\parbox{0.7\linewidth}{
+	\Algo{R, U, U} \\[1em]
+	(\Algo{R, R, Up}) (\Algo{R, R, Up}) \\[1em]
+  \Algo{R, R, U, U, R}
+}\\[1em]
+\Train{U2 F U2 F2 L2 F' L2 U2 F U2 L2 U' B2 U F2 U' B2 L2 U L2}\\[3em]
+%
+%
+\parbox{0.3\linewidth}{
+\begin{center}
+  \textbf{T} \\
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{Y}{Y}
+	      {Y}{Y}{Y}
+	      {X}{Y}{Y}%
+  \RubikFaceFront{Y}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+  \RubikFaceRight{X}{X}{X}
 		 {X}{X}{X}
 		 {X}{X}{X}%
   \RubikFaceLeft{X}{X}{X}
@@ -222,19 +432,24 @@ $\Longrightarrow$
     \DrawRubikFaceUpSide
   }
 \end{center}
-}
-$\Longrightarrow$
-\parbox{0.2\linewidth}{
+}%
+\parbox{0.7\linewidth}{
+	(\Algo{Rw, U, Rp, Up}) \\[1em] (\Algo{Rwp, F, R, Fp})
+}\\[1em]
+\Train{U F D B2 D' F U2 B2 U B2 U R2 U R2 U B2 F2}\\[3em]
+%
+%
+\parbox{0.3\linewidth}{
 \begin{center}
-  \textbf{Fertig} \\[1ex]
+  \textbf{U} \\
   \RubikCubeGreyAll%
   \RubikFaceUp{Y}{Y}{Y}
 	      {Y}{Y}{Y}
-	      {Y}{Y}{Y}%
-  \RubikFaceFront{X}{X}{X}
+	      {X}{Y}{X}%
+  \RubikFaceFront{Y}{X}{Y}
 		 {X}{X}{X}
 		 {X}{X}{X}%
-  \RubikFaceRight{X}{X}{Y}
+  \RubikFaceRight{X}{X}{X}
 		 {X}{X}{X}
 		 {X}{X}{X}%
   \RubikFaceLeft{X}{X}{X}
@@ -248,11 +463,10 @@ $\Longrightarrow$
     \DrawRubikFaceUpSide
   }
 \end{center}
-}\\[2em]
-
-Den Algorithmus, um vom \textbf{Fisch}-Muster zur fertigen Fläche zu kommen, haben wir bereits in der Anfängermethode gelernt.
-Wir können jetzt Stück für Stück weitere Algorithmen dazu nehmen, welche dann auch aus einem der Muster direkt die fertige Fläche erzeugen.
-
-Die Muster \textbf{T}, \textbf{U} und \textbf{L} sind nach der Anfängermethode am weitesten von der fertigen Fläche weg.
-Hier kann man also die meisten Schritte sparen, wenn man die dazu gehörigen Algorithmen lernt.
-Anschließend lohnt es sich die \textbf{H} und \textbf{Pi} Fälle zu lernen und zum Schluss den \textbf{Anti-Fisch}.
+}%
+\parbox{0.7\linewidth}{
+	\Algo{R, R, D} \\[1em] (\Algo{Rp, U, U, R}) \\[1em]
+	\Algo{Dp} \\[1em]
+	(\Algo{Rp, U, U, Rp})
+}\\[1em]
+\Train{U L U' F2 U F2 U L U2 F2 D R2 B2 U B2 D' R2 F2 U L2}
