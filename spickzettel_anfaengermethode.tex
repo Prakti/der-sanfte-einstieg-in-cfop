@@ -1,0 +1,162 @@
+\documentclass[9pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage{tgpagella}
+\usepackage{tgheros}
+
+\usepackage[scale=0.85, a6paper, landscape]{geometry}
+
+\usepackage{tikz}
+\usepackage{rubikcube,rubikrotation,rubikpatterns}
+
+\newcommand{\cubenumber}[1]{\strut\raisebox{1cm}{#1}}
+\newcommand{\Algo}[1]{\ShowSequence{\ }{\textRubik}{#1}}
+
+
+\begin{document}
+
+\section*{Erste Ebene}
+\section*{Weißes Kreuz bauen}
+\begin{itemize}
+  \item Die gelbe Blume bauen mit \Algo{R}, \Algo{R,R} oder \Algo{Up, R}
+  \item Dann nacheinander einzeln die Kantensteine über passende Mittelsteine bringen und "runter drehen"; mit z.B.: \Algo{F, F}
+\end{itemize}
+
+\subsection*{Weiße Ecksteine}
+\Algo{Rp, Dp, R, D}
+
+\pagebreak
+
+\section*{Zweite Ebene}
+\subsection*{Kantensteine Mitte}
+\subsubsection*{Von 'Oben' nach 'Rechts'}
+\Algo{U, R, Up, Rp, Up, Fp, U, F}
+
+\subsubsection*{Von 'Oben' nach 'Links'}
+\Algo{Up, Lp, U, L, U, F, Up, Fp}
+
+\pagebreak
+
+\section*{Dritte Ebene}
+\subsection*{Gelbes Kreuz}
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {X}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{Y}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{Y}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.35}{%
+  \DrawRubikCubeRU%
+}
+$\Longrightarrow$
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{X}
+            {X}{X}{X}%
+\RubikFaceFront{X}{Y}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{Y}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.35}{%
+  \DrawRubikCubeRU%
+}
+$\Longrightarrow$
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{X}{X}
+            {Y}{Y}{Y}
+            {X}{X}{X}%
+\RubikFaceFront{X}{Y}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.35}{%
+  \DrawRubikCubeRU%
+}
+$\Longrightarrow$
+\RubikCubeGreyAll%
+\RubikFaceUp{X}{Y}{X}
+            {Y}{Y}{Y}
+            {X}{Y}{X}%
+\RubikFaceFront{X}{X}{X}
+               {R}{R}{R}
+	       {R}{R}{R}%
+\RubikFaceRight{X}{X}{X}
+	       {G}{G}{G}
+	       {G}{G}{G}%
+\ShowCube{2.5cm}{0.35}{%
+  \DrawRubikCubeRU%
+}\\[1ex]
+\Algo{F, R, U, Rp, Up, Fp}
+
+\subsection*{Orientierung der gelben Ecken}
+\parbox{0.5\linewidth}{
+  \RubikCubeGreyAll%
+  \RubikFaceUp{X}{Y}{X}
+	      {Y}{Y}{Y}
+	      {Y}{Y}{X}%
+  \RubikFaceFront{X}{X}{X}
+		 {R}{R}{R}
+		 {R}{R}{R}%
+  \RubikFaceRight{X}{X}{X}
+		 {G}{G}{G}
+		 {G}{G}{G}%
+  \RubikFaceLeft{X}{X}{X}
+		{B}{B}{B}
+		{B}{B}{B}%
+  \RubikFaceBack{X}{X}{X}
+		{O}{O}{O}
+		{O}{O}{O}%
+  \ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+  \ShowCube{2.5cm}{0.4}{%
+    \DrawRubikFaceUpSide
+  }\\[1em]
+  Eine Ecke richtig: richtige Ecke vorne links!
+}%
+\parbox{0.5\linewidth}{
+  \RubikCubeGreyAll%
+  \RubikFaceUp{Y}{Y}{Y}
+	      {Y}{Y}{Y}
+	      {X}{Y}{X}%
+  \RubikFaceFront{Y}{X}{X}
+		 {R}{R}{R}
+		 {R}{R}{R}%
+  \RubikFaceRight{X}{X}{X}
+		 {G}{G}{G}
+		 {G}{G}{G}%
+  \RubikFaceLeft{X}{X}{X}
+		{B}{B}{B}
+		{B}{B}{B}%
+  \RubikFaceBack{X}{X}{X}
+		{O}{O}{O}
+		{O}{O}{O}%
+  \ShowCube{2cm}{0.4}{\DrawRubikCubeRU}
+  \ShowCube{2.5cm}{0.4}{%
+    \DrawRubikFaceUpSide
+  }\\[1em]
+  Zwei Ecken richtig: eine falsche Ecke vorne links, gelbe Seite vorn!
+}\\[1em]
+
+\Algo{R, U, Rp, Up, R, U, U, Rp}
+
+\subsection*{Positionierung der gelben Ecksteine}
+Scheinwerfer nach links.\\[1em]
+\Algo{R, U, Rp, Up, Rp, F} \\[1em]
+\Algo{R, R, Up, Rp, Up, R, U, Rp, Fp}
+
+\subsection*{Positionierung der gelben Kantensteine}
+Richtigen Kantenstein nach hinten.
+
+\Algo{R, Up, R, U, R, U, R, Up, Rp, Up, R, R}
+
+\end{document}

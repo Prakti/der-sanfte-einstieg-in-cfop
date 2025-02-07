@@ -1,11 +1,9 @@
 \selectlanguage{ngerman}
 \section{Die gelbe Ebene in einem Schritt fertig ausrichten}
-Beim gelben Kreuz haben wir fürs Erste alles Optimiert was geht.
-Aber jetzt, auf dem Weg zur gelben Ebene, können wir einiges Optimieren.
+Auf dem Weg vom gelben Kreuz zur gelben Ebene können wir schneller werden, indem wir durch die Anwendung von nur einem Algorithmus zur gelben Ebene kommen.
+Hat man jetzt das gelbe Kreuz fertig, können sich (nur) acht mögliche Muster ergeben:
 
-Hat man jetzt das gelbe Kreuz fertig, können sich acht mögliche Muster ergeben.
-
-Zwei für den Fall, dass keine gelbe Ecke korrekt ausgerichtet ist\footnote{Ist manchmal zufällig der Fall!}:
+Zwei für den Fall, dass keine gelbe Ecke korrekt ausgerichtet ist:
 \parbox{0.5\linewidth}{
 	\begin{center}
 		\textbf{H}\\[1ex]
@@ -210,13 +208,99 @@ Eins für den Fall, dass alle gelben Ecken korrekt ausgerichtet sind:
 }\\[3em]
 
 In der Anfängermethode sind uns die Muster bereits begegnet, wir haben sie nur nicht bewusst wahrgenommen.
-Und wir haben in der Anfängermethode bereits den Fall gelernt, um aus dem \textbf{Fisch}-Muster die fertige gelbe Fläche zu machen.
-Zusätzlich nutzen wir aber auch diesen Algorithmus, um die anderen Muster Schritt für Schritt in das \textbf{Fisch}-Muster zu überführen:
+Hier einmal ein Beispiel wie man mit der Anfängermethode durch die obigen Muster geht um zu der gelben Fläche zu kommen:
+
+\newcommand{\OLLU}{
+	\RubikCubeGreyAll%
+	\RubikFaceUp{Y}{Y}{Y}
+				{Y}{Y}{Y}
+				{X}{Y}{X}%
+	\RubikFaceFront{Y}{X}{Y}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+	\RubikFaceRight{X}{X}{X}
+		 {X}{X}{X}
+		 {X}{X}{X}%
+	\RubikFaceLeft{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+	\RubikFaceBack{X}{X}{X}
+		{X}{X}{X}
+		{X}{X}{X}%
+}
+
+\parbox{0.7\linewidth}{
+	Angenommen wir erhalten das \textbf{U} Muster, nachdem wir das gelbe Kreuz gebildet haben:
+}\parbox{0.3\linewidth}{
+	\centering
+	\OLLU
+	\ShowCube{1.5cm}{0.35}{%
+		\DrawRubikFaceUpSide
+	}
+}\\[1em]
+Das entspricht Fall 3 aus der Anfängermethode, wir müssen den Würfel nicht drehen, weil bereits eine falsche Ecke vorne links liegt und können den Algorithmus direkt anwenden:\\[1em]
+(\Algo{R, U, Rp, U}) (\Algo{R, U, U, Rp})\\[1em]
+\parbox{0.7\linewidth}{
+	Dann erhalten wir das \textbf{Anti-Fisch} Muster, allerdings um 90° gedreht. Das entspricht, Fall 2 aus der Anfängermethode. }
+\parbox{0.3\linewidth}{
+	\centering
+	\OLLU
+	\RubikRotation{R, U, Rp, U, R, U, U, Rp}
+	\ShowCube{15mm}{0.35}{\DrawRubikFaceUpSide}\\
+}\\[1em]
+\parbox{0.7\linewidth}{
+	Wir müssen also erst den Würfel so drehen, dass die korrekte Ecke links unten ist:
+}\parbox{0.3\linewidth}{
+	\centering
+	\centering
+	\OLLU
+	\RubikRotation{R, U, Rp, U, R, U, U, Rp}
+	\RubikRotation{yp}
+	\ShowCube{15mm}{0.35}{\DrawRubikFaceUpSide}\\
+}\\[1em]
+Jetzt wenden wir wieder den Algorithmus an:\\[1em]
+(\Algo{R, U, Rp, U}) (\Algo{R, U, U, Rp})\\
+\parbox{0.7\linewidth}{
+	Danach erhalten wir das \textbf{Fisch} Muster, allerdings um 180° gedreht. Das entspricht wieder Fall 1 aus der Anfängermethode.
+}\parbox{0.3\linewidth}{
+	\centering
+	\OLLU
+	\RubikRotation{R, U, Rp, U, R, U, U, Rp}
+	\RubikRotation{yp}
+	\RubikRotation{R, U, Rp, U, R, U, U, Rp}
+	\ShowCube{15mm}{0.35}{\DrawRubikFaceUpSide}
+}\\[1em]
+\parbox{0.7\linewidth}{
+	Wir müssen also den Würfel so drehen, dass die korrekte Ecke links unten ist:
+}\parbox{0.3\linewidth}{
+	\centering
+	\OLLU
+	\RubikRotation{R, U, Rp, U, R, U, U, Rp}
+	\RubikRotation{yp}
+	\RubikRotation{R, U, Rp, U, R, U, U, Rp}
+	\RubikRotation{y, y}
+	\ShowCube{15mm}{0.35}{\DrawRubikFaceUpSide}
+}\\[1em]
+Jetzt wenden wir noch einmal den Algorithmus an:\\[1em]
+(\Algo{R, U, Rp, U}) (\Algo{R, U, U, Rp})\\[1em]
+\parbox{0.3\linewidth}{
+	\OLLU
+	\RubikRotation{R, U, Rp, U, R, U, U, Rp}
+	\RubikRotation{yp}
+	\RubikRotation{R, U, Rp, U, R, U, U, Rp}
+	\RubikRotation{y, y}
+	\RubikRotation{R, U, Rp, U, R, U, U, Rp}
+	\ShowCube{15mm}{0.35}{\DrawRubikFaceUpSide}\\
+}\parbox{0.7\linewidth}{
+	Und jetzt ist die gelbe Fläche fertig.
+}\\[3em]
+Hier einmal ein Diagramm, das für alle acht Muster erläutert, wie man sie nach der Anfängermethode in die fertige gelbe Fläche überführt:
 \begin{center}
 	\begin{tikzpicture}[nodes={draw, thick, rounded corners, font=\bfseries}]
 		\node[] (T) {T};
 		\node[] (U) [above=of T] {U};
 		\node[] (L) [below=of T] {L};
+
 		\node[] (Antifisch) [right=of T] {Anti-Fisch};
 		\node[] (Fisch) [right=of Antifisch] {Fisch};
 		\node[] (Pi) [above=of Fisch] {Pi};
@@ -233,23 +317,19 @@ Zusätzlich nutzen wir aber auch diesen Algorithmus, um die anderen Muster Schri
 	\end{tikzpicture}
 \end{center}
 
-Hier können wir jetzt immer mehr Abkürzungen einbauen.
-Denn es gibt für jedes der sechs übrigen Muster einen Algorithmus, mit denen man aus ihnen die gelbe Fläche machen kann.
-Diese kannst Du jetzt sukzessive lernen.
-Hast Du für ein Muster den Algorithmus noch nicht auswendig gelernt, greif einfach auf die Anfängermethode zurück, die ist voll kompatibel!
+Analog zu dem Beispiel oben, zeigt das Diagramm die drei Schritte bis zur fertigen gelben Fläche. Man kann auch sehen, dass man auch für das \textbf{T} Muster und das \textbf{L} Muster drei Schritte braucht um zur gelben Fläche zu kommen. Und dass man zwei Schritte braucht, um vom \textbf{Anti-Fisch}, \textbf{Pi} Muster und \textbf{H} Muster zur fertigen gelben Fläche zu kommen. Allein das \textbf{Fisch} Muster kann man in einem Schritt lösen.
+
+Wir können hier jetzt schneller werden, indem wir Für jedes der sechs übrigen Muster einen Algorithmus lernen, mit dem man in einem Schritt zur gelben Fläche gelangt.
+Diese werden wir Dir jetzt vorstellen und dann kannst Du sie sukzessive lernen.
+Hast Du für ein Muster den Algorithmus noch nicht auswendig gelernt, greif einfach auf die Anfängermethode zurückel!
 Mit welchem Muster Du anfangen willst, das ist Dir überlassen.
 
-Damit Du einen Algorithmus auch effektiv üben kannst, musst Du immer wieder das passende Muster herstellen.
-Dafür haben wir Dir zusätzlich immer noch einen sogenannten "'Training Scramble"' unter dem Algorithmus abgedruckt.
-Nimm dazu einen gelösten Würfel und halte ihn mit der gelben Ebene nach oben.
-Führe dann die Drehungen aus dem "'Training Scramble"' aus, um das gesuchte Muster zum Üben herzustellen.
+Die folgenden Algorithmen haben eine interessante Eigenschaft, die man für das Auswendiglernen ausnutzen kann.
+Wenn man bei einer gelben Fläche anfängt und einen Algorithmus zwei bis drei Mal wiederholt erhält man wieder die gelbe Fläche.
+Du kannst also einen Algorithmen üben, indem Du bei einer gelben Fläche startest und den Algorithmus so lange wiederholst, bis Du wieder bei der gelben Fläche angekommen bist.
+Das hilft Dir Dann auch, den Algorithmus in Deinem Muskelgedächtnis zu verankern und du wirst immer schneller.
 
-Wenn Du bei einer gelben Fläche anfängst und einen Algorithmus zwei bis drei Mal wiederholst wirst Du auch wieder bei der gelben Fläche ankommen.
-Damit kann man auch ohne einen "'Training Scramble"' einen Algorithmus wiederholen, bis man ihn sicher beherrscht.
-Am besten ist es zudem, wenn so ein Algorithmus im Muskelgedächtnis verankert ist.
-Dann muss man kaum bewusst darüber nachdenken, denn die Finger wissen quasi schon selber was sie zu tun haben.
-\\[1em]
-%
+\subsection{Muster und Algorithmen}
 \parbox{0.3\linewidth}{
 	\centering
 	\textbf{Fisch} \\[1ex]
@@ -277,7 +357,6 @@ Dann muss man kaum bewusst darüber nachdenken, denn die Finger wissen quasi sch
 \parbox{0.7\linewidth}{
 	(\Algo{R, U, Rp, U}) \\[1em] (\Algo{R, U, U, Rp})
 }\\[1em]
-\Train{Up, Bp, Up, B, Up, Bp, U2, B, Up, B2, R2, L, U, L, Up L2, D, L2, Dp, R2, B2} \\[3em]
 %
 %
 \parbox{0.3\linewidth}{
@@ -308,7 +387,6 @@ Dann muss man kaum bewusst darüber nachdenken, denn die Finger wissen quasi sch
 \parbox{0.7\linewidth}{
 	(\Algo{R, U, U, Rp, Up}) \\[1em] (\Algo{R, Up, Rp})
 }\\[1em]
-\Train{U' L' D' R D L' D' R U R2 U' L2 F2 U' L2 B2 L2 F2 R2}\\[3em]
 %
 %
 \parbox{0.3\linewidth}{
@@ -341,7 +419,6 @@ Dann muss man kaum bewusst darüber nachdenken, denn die Finger wissen quasi sch
 	(\Algo{R, Up, Rp, U}) \\[1em]
   (\Algo{R, U, U, Rp})
 }\\[1em]
-\Train{U' L B L' B2 R B' R B2 L2 F2 U2 B2 D' B2 U L2 B2 D' B2}\\[3em]
 %
 %
 \parbox{0.3\linewidth}{
@@ -372,7 +449,6 @@ Dann muss man kaum bewusst darüber nachdenken, denn die Finger wissen quasi sch
 \parbox{0.7\linewidth}{
 	(\Algo{F, Rp, Fp, Rw}) \\[1em] (\Algo{U, R, Up, Rwp})
 }\\[1em]
-\Train{U L U' F2 U F2 U L R2 U' L2 U' L2 U2 L2 F2 U F2 U R2}\\[3em]
 %
 %
 \parbox{0.3\linewidth}{
@@ -405,7 +481,6 @@ Dann muss man kaum bewusst darüber nachdenken, denn die Finger wissen quasi sch
 	(\Algo{R, R, Up}) (\Algo{R, R, Up}) \\[1em]
   \Algo{R, R, U, U, R}
 }\\[1em]
-\Train{U2 F U2 F2 L2 F' L2 U2 F U2 L2 U' B2 U F2 U' B2 L2 U L2}\\[3em]
 %
 %
 \parbox{0.3\linewidth}{
@@ -436,7 +511,6 @@ Dann muss man kaum bewusst darüber nachdenken, denn die Finger wissen quasi sch
 \parbox{0.7\linewidth}{
 	(\Algo{Rw, U, Rp, Up}) \\[1em] (\Algo{Rwp, F, R, Fp})
 }\\[1em]
-\Train{U F D B2 D' F U2 B2 U B2 U R2 U R2 U B2 F2}\\[3em]
 %
 %
 \parbox{0.3\linewidth}{
@@ -469,4 +543,3 @@ Dann muss man kaum bewusst darüber nachdenken, denn die Finger wissen quasi sch
 	\Algo{Dp} \\[1em]
 	(\Algo{Rp, U, U, Rp})
 }\\[1em]
-\Train{U L U' F2 U F2 U L U2 F2 D R2 B2 U B2 D' R2 F2 U L2}

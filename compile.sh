@@ -1,3 +1,3 @@
 #!/bin/sh
 
-latexmk --pdf --shell-escape $@ buch.tex
+latexmk --pdf --shell-escape $@
